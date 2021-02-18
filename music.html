@@ -1,0 +1,515 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>BrainWave > Music</title>
+  <link rel="short icon" type=image href="logo4.png">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+  <style>
+  	.col-md-7 a{color: white;}
+  body {
+    position: relative; 
+  }
+  #mode.affix{top:50px;width: 100%;z-index: 9999;padding-top: 10px;}
+  #add2.affix,#sidenav.affix{top:300px;}
+  nav.affix {
+    top:0;
+    width: 100%;
+    z-index: 9999 !important;
+  }
+  .navbar {
+    margin-bottom: 0px;
+  }
+  
+  nav.affix ~ .container-fluid {
+   position: relative;
+   top: 50px;
+  }
+  
+  p,li{font-size: 20px;}
+  .navbar li{
+    font-weight: 700;
+    font-size: 15px;
+    padding: 0px;
+  }
+      *{font-family: serif;}
+  body{overflow-x:hidden;}
+    
+.navbar-inverse .collapse .nav li  a{
+        font-size: 20px;
+        color:white;
+        font-family: serif;
+      }
+ .navbar-inverse .collapse .nav li  a:hover{
+        text-decoration: none;
+        font-size: 23px;
+        
+      }
+      .popover {
+    background: #4c91cd;
+    box-shadow: none;
+    width: 250px;
+      }
+    .popover.bottom .arrow:after {
+        border-bottom-color: #4c91cd;
+    }
+.right{ float: right; }
+.left{float: left;}
+   .navbar-inverse{
+    background: #337ab7;}
+    .col-md-7 ul li{cursor: pointer;}
+  </style>
+</head>
+<body  data-spy="scroll" data-target="#sidenav" data-offset="50">
+
+<div class=row>
+  <div class="col-md-3 col-xs-12">
+    <center><a href=brain-latest.html><img src="wave.png" height="63px" width="auto" style="margin-top: 10px;"></a></center>
+  </div>
+  <div class="col-md-9" id=top_text>
+    <p class="text-uppercase navbar-text" style="float: right;font-family:sans-serif;word-spacing: 5px;letter-spacing: 2px;font-size: 17px; padding-left:10px;"><br>A wave to make india mentally strong and relaxed</p>
+  </div>
+  </div>
+  <nav class=" navbar-inverse " data-spy=affix data-offset-top=90>
+    <div class=navbar-header>
+  <a type="button" class="navbar-toggle btn btn-default" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav">
+        <li><a href=powermind.html>Power Mind</a></li>
+        <li><a href=# data-trigger=focus data-toggle=popover data-placement=bottom data-content="<li><a href=yoga.html>Crossword Puzzle </a> </li> <li><a href=#>Racing</a></li><li><a href=# >Sudoku</a></li>">Games<span class=caret></span></a></li>
+        <li><a href=music.html>Music</a></li>
+        <li><a href=# data-trigger=focus data-toggle=popover data-placement=bottom data-content="<li><a href=quotesMotivation.html>Motivational Quotes </a> </li> <li><a href=motvid.html>Motivational Videos</a></li><li><a href=testmotlev.html >Motivation Level Test</a></li>">Motivation<span class="caret"></span></a></li>
+        <li><a href=yoga.html>Yoga</a></li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <form class="navbar-form">
+        <div class=input-group>
+        <input type="text" id=search name="search" placeholder="Search..." class="form-control">
+        <div class="input-group-btn">
+          <button class="btn btn-default"><span class="glyphicon glyphicon-search"></span></button>
+        </div>
+        </div>
+        </form>
+      </ul>
+  </nav>
+    <script>
+    
+      $(window).resize(function(){
+
+        if($(window).width()<=800)
+      {
+        $('#top_text').hide();
+      }
+      else 
+      {
+        $('#top_text').show();
+      }
+
+      });
+     
+      $('[data-toggle=popover]').popover({
+        html:true
+      });
+    
+  </script>
+
+<div style="width: 100%" id=mood>
+  <br><br><br><br><br><br><br>
+  <center><h1>Choose Your Mood<br><small>Enjoy Your music according to your moods...</small></h1></center>
+  <div class="bg-warning" data-spy=affix data-offset-top="260" id=mode >
+    
+    <div class="col-md-offset-1 col-md-2" id=happy_link><center><img class="img-circle" src="happy.gif" height="100px" width="100px"><br><h3>Happy</h3></center></div>
+    <div class="col-md-2" id=sad_link><center><img class="img-circle" src="sad.gif" height="100px" width="100px"><br><h3>Sad</h3></center></div>
+    <div class="col-md-2" id=bored_link><center><img class="img-circle" src="bored.gif" height="100px" width="100px"><br><h3>Bored</h3></center></div>
+    <div class="col-md-2" id=angry_link><center><img class="img-circle" src="angry.gif" height="100px" width="100px"><br><h3>Angry</h3></center></div>
+    <div class="col-md-2" id=tired_link><center><img class="img-circle" src="tired.gif" height="100px" width="100px"><br><h3>Tired</h3></center></div>
+  </div>
+</div>
+<script>
+$(document).ready(function(){
+    $("#mood").height($(window).height()-50);
+
+	$("#happy_link").click(function(){
+    	$("#section2,#section3,#section4,#section5").hide();
+		  $("#section1").show();
+	})
+	$("#sad_link").click(function(){
+      $("#section2").show();
+	  $("#section1,#section3,#section4,#section5").hide();
+		
+	})
+	$("#bored_link").click(function(){
+	$("#section2,#section1,#section4,#section5").hide();
+		$("#section3").show();
+	})
+	$("#angry_link").click(function(){
+		$("#section2,#section3,#section1,#section5").hide();
+		$("#section4").show();
+	})
+	$("#tired_link").click(function(){
+		$("#section2,#section3,#section4,#section1").hide();
+		$("#section5").show();
+	})
+	$("#english").click(function(){
+		$(".english").show();
+		$(".hindi,.punjabi,.korian").hide();
+	})
+		$("#hindi").click(function(){
+		$(".hindi").show();
+		$(".english, .punjabi, .korian").hide();
+	})
+			$("#punjabi").click(function(){
+		$(".punjabi").show();
+		$(".hindi, .english, .korian").hide();
+	})
+				$("#korian").click(function(){
+		$(".korian").show();
+		$(".hindi, .punjabi, .english").hide();
+	})
+			});
+
+</script>
+	
+	<script>
+		$(document).ready(function(){
+			//$("#butn").click(function(){
+				//$("#audio").attr("src","eng2.mp3");
+
+			//});
+			$('.col-md-7 div ul li a').on('click', function(e) {
+    e.preventDefault();
+    var src = $(this).attr('href');
+    $('#audio').attr('src',src);
+    
+   // $('#audio').attr('src', function(i,org){ return "eng1.mp3";});
+    
+});
+		});
+	</script>
+	<div class="col-md-2" >
+  <ul class="nav nav-pills nav-stacked" id="sidenav" data-spy=affix data-offset-top=380>
+    <br>
+           <li><a href="#grp" id=english>English</a></li>
+            <li><a href="#grp" id=hindi>Hindi</a></li>
+            <li><a href="#grp" id=punjabi>Punjabi</a></li>
+            <li><a href="#grp" id=korian>Other lang</a></li>
+  </ul>
+</div>
+
+<div class="col-md-7" style="background: url('mus.jpg') no-repeat center fixed;background-size: cover;color: white;">
+  <div  class=" grp container-fluid"id=grp >
+  	<ul style="list-style-image: url('mu.png'); " id="section1">
+    <li class="english"><a href="songs/eng1.mp3" >I Gotta Feeling - The Black Eyed Peas</a></li>
+    <li class="english"><a href="songs/eng2.mp3">HAPPY - Pharrell Williams feat Minions</a></li>
+    <li class="english"><a href="songs/eng11.mp3">Red Velvet</a></li>
+    <li class="english"><a href="songs/eng12.mp3" >Han rom like sweet kiss like coffee</a></li>
+    <li class="english"><a href="songs/eng13.mp3" >Happiness</a></li>
+    <li class="english"><a href="songs/eng17.mp3" >If I had magic</a></li>
+    <li class="english"><a href="songs/eng20.mp3" >BlocBoy JB Drake - Look Alive Lyrics</a></li>
+    <li class="english"><a href="songs/eng21.mp3" >Hunger - Florence + The Machine Lyrics</a></li>
+    <li class="english"><a href="songs/eng22.mp3" >Khalid Normani - Love Lies Lyrics</a></li>
+    <li class="english"><a href="songs/eng23.mp3" >The Weeknd - Call Out My Name Official Video</a></li>
+    <li class="english"><a href="songs/eng24.mp3" >Christine and The Queens Girlfriend feat Dm Funk LYRICS</a></li>
+    <li class="english"><a href="songs/eng29.mp3" >Camila Cabello - Never Be the Same Audio</a></li>
+    <li class="english"><a href="songs/eng30.mp3" >Drake - God's Plan Lyric Video</a></li>
+    
+    <li class="hindi"><a href="songs/hindi1.mp3">Itti si hansi itti si khushi BARFI</a></li>
+    <li class="hindi"><a href="songs/hindi14.mp3">coca cola</a></li>
+    <li class="hindi"><a href="songs/hindi2.mp3">Zindagi Ek Safar Hai Suhana</a></li>
+    <li class="hindi"><a href="songs/hindi15.mp3">Kalank - First Class</a></li>
+    <li class="hindi"><a href="songs/hindi16.mp3">Bholi Si Surat </a></li>
+    <li class="hindi"><a href="songs/hindi20.mp3">Cutiepie - Ae Dil Hai Mushkil</a></li>
+    <li class="hindi"><a href="songs/hindi26.mp3">Samjhawan - Humpty Sharma Ki Dulhania</a></li>
+    <li class="hindi"><a href="songs/hindi28.mp3">Nachde Ne Saare Bollywood Dance</a></li>
+    <li class="hindi"><a href="songs/hindi32.mp3">Mumbai Dilli Di Kudiyaan</a></li>
+    <li class="hindi"><a href="songs/hindi33.mp3">The Jawaani</a></li>
+    <li class="hindi"><a href="songs/hindi39.mp3">Mere angane mein tumhara</a></li>
+    <li class="hindi"><a href="songs/hindi17.mp3">Dil To Pagal Hai</a></li>
+    <li class="hindi"><a href="songs/hindi18.mp3">Kuch Kuch Hota Hai</a></li>
+    
+    <li class="punjabi"><a href="songs/pbi1.mp3">Wakhra Swag</a></li>
+    <li class="punjabi"><a href="songs/pbi2.mp3">All Black</a></li>
+    <li class="punjabi"><a href="songs/pbi13.mp3">Suit Suit Video Song</a></li>
+    <li class="punjabi"><a href="songs/pbi15.mp3"> Hauli hauli gidhe vich nach patloni</a></li>
+    <li class="punjabi"><a href="songs/pbi18.mp3">coka</a></li>
+    <li class="punjabi"><a href="songs/pbi19.mp3">Munde Patt Te</a></li>
+    <li class="punjabi"><a href="songs/pbi20.mp3">kali kali Nain kali kali shoes</a></li>
+    <li class="punjabi"><a href="songs/pbi21.mp3">Angreji Beat</a></li>
+    <li class="punjabi"><a href="songs/pbi22.mp3">Guru Randhawa Downtown</a></li>
+    <li class="punjabi"><a href="songs/pbi33.mp3">Kaali Kaali Gaddi  Vadda Grewal Feat Game Changerz</a></li>
+    <li class="punjabi"><a href="songs/pbi23.mp3">Guru Randhawa Lahore</a></li>
+    <li class="punjabi"><a href="songs/pbi14.mp3">Sip sip</a></li>
+    <li class="punjabi"><a href="songs/pbi25.mp3">Mere Wala Sardar</a></li>
+    <li class="punjabi"><a href="songs/pbi26.mp3">Putt Jatt Da</a></li>
+   
+    <li class="korian"><a href="songs/korian1.mp3">Agust D give it to me MV</a></li>
+    <li class="korian"><a href="songs/korian2.mp3">bambu su kakemono</a></li>
+    <li class="korian"><a href="songs/korian12.mp3">BTS Boy With Luv feat Halsey</a></li>
+    <li class="korian"><a href="songs/korian10.mp3">Apink - I'm So Sick</a></li>
+    <li class="korian"><a href="songs/korian11.mp3">Golden Hour</a></li>
+    <li class="korian"><a href="songs/korian13.mp3"> izone  -  Violeta</a></li>
+    <li class="korian"><a href="songs/korian14.mp3">ITZY quotDALLA DALLAquot M_V</a></li>
+    <li class="korian"><a href="songs/korian13.mp3">CHOREOGRAPHY BTS Dionysus</a></li>
+    <li class="korian"><a href="songs/korian16.mp3">Bluescript - Metamorphosis</a></li>
+    <li class="korian"><a href="songs/korian17.mp3">JENNIE -SOLO M_V</a></li>
+    <li class="korian"><a href="songs/korian18.mp3">Giriboy - acrnm Prod By  Feat Goretexx </a></li>
+    <li class="korian"><a href="songs/korian19.mp3">GodDy</a></li>
+    <li class="korian"><a href="songs/korian21.mp3">HAON ,NOAH feat  Hoody, Prod GroovyRoom M_V</a></li>
+    
+
+  </ul>
+  <ul style="list-style-image: url('mu.png'); " id="section2">
+    <li class="english"><a href="songs/eng3.mp3" >Three Days Grace - I Hate Everything About You</a></li>
+    <li class="english"><a href="songs/eng4.mp3" >Passenger - Let Her Go Cover  Eastern Lights  Jack Tracks </a></li>
+    <li class="english"><a href="songs/eng18.mp3" >You Can Count on me like 1 2 3 by Bruno Mars</a></li>
+    <li class="english"><a href="songs/eng25.mp3" >John Mayer - New Light Lyrics</a></li>
+    <li class="english"><a href="songs/eng26.mp3" >Marshmello amp Anne-Marie - FRIENDS Lyric Video OFFICIAL FRIENDZONE ANTHEM</a></li>
+    <li class="english"><a href="songs/eng27.mp3" >Shawn Mendes - Lost In Japan Lyrics</a></li>
+    <li class="english"><a href="songs/eng28.mp3" >Kali Uchis - After The Storm ft Tyler The Creator Bootsy Collins</a></li>
+    <li class="english"><a href="songs/eng29.mp3" >Camila Cabello - Never Be the Same Audio</a></li>
+    <li class="english"><a href="songs/eng30.mp3" >Drake - God's Plan Lyric Video</a></li>
+    <li class="english"><a href="songs/eng31.mp3" >Janelle Mone - I Like That Official Music Video</a></li>
+    <li class="english"><a href="songs/eng32.mp3" >Kacey Musgraves - High Horse Official Lyric Video</a></li>
+    <li class="english"><a href="songs/eng22.mp3" >Khalid Normani - Love Lies Lyrics</a></li>
+    
+    <li class="hindi"><a href="songs/hindi3.mp3" >Tujhe Bhula Diya</a></li>
+    <li class="hindi"><a href="songs/hindi4.mp3" >Channa Mereya</a></li>
+    <li class="hindi"><a href="songs/hindi12.mp3" >Phir le aaya dil</a></li>
+    <li class="hindi"><a href="songs/hindi17.mp3">Dil To Pagal Hai</a></li>
+    <li class="hindi"><a href="songs/hindi18.mp3">Kuch Kuch Hota Hai</a></li>
+    <li class="hindi"><a href="songs/hindi19.mp3">Vaaste Song</a></li>
+    <li class="hindi"><a href="songs/hindi27.mp3">Heartless</a></li>
+    <li class="hindi"><a href="songs/hindi34.mp3">Naina Song</a></li>
+    <li class="hindi"><a href="songs/hindi35.mp3">Kedarnath  Qaafirana</a></li>
+    <li class="hindi"><a href="songs/hindi37.mp3">Roke Na Ruke Naina Video Song</a></li>
+    <li class="hindi"><a href="songs/hindi40.mp3">Naina Da Kya Kasoor</a></li>
+    <li class="hindi"><a href="songs/hindi41.mp3">Main Badhiya Tu Bhi Badhiya</a></li>
+    <li class="hindi"><a href="songs/hindi44.mp3">Samay Ka Pahiya</a></li>
+    
+    <li class="punjabi"><a href="songs/pbi3.mp3">Soch</a></li>
+    <li class="punjabi"><a href="songs/pbi4.mp3">teri yaadein</a></li>
+    <li class="punjabi"><a href="songs/pbi27.mp3">Sakhiyaan</a></li>
+   <li class="punjabi"><a href="songs/pbi28.mp3">She Don't Know</a></li>
+   <li class="punjabi"><a href="songs/pbi39.mp3">Mann Bharrya</a></li>
+   <li class="punjabi"><a href="songs/pbi2.mp3">All Black</a></li>
+    <li class="punjabi"><a href="songs/pbi13.mp3">Suit Suit Video Song</a></li>
+    <li class="punjabi"><a href="songs/pbi15.mp3"> Hauli hauli gidhe vich nach patloni</a></li>
+   <li class="punjabi"><a href="songs/pbi8.mp3">angry subha</a></li>
+    <li class="punjabi"><a href="songs/pbi30.mp3">dhol vajea</a></li>
+   <li class="punjabi"><a href="songs/pbi42.mp3">Qismat</a></li>
+   <li class="punjabi"><a href="songs/pbi16.mp3">quotRaashi Soodquot Bewafa Hunde Ne</a></li>
+   <li class="punjabi"><a href="songs/pbi40.mp3">Jatt yamla</a></li>
+   
+    <li class="korian"><a href="songs/korian3.mp3">Broken heart love song</a></li>
+    <li class="korian"><a href="songs/korian4.mp3">My loona</a></li>
+    <li class="korian"><a href="songs/korian20.mp3">IZONE  -  La Vie en Rose MV</a></li>
+    <li class="korian"><a href="songs/korian22.mp3">pH-1 - Penthouse Feat Sik-K Prod APRO</a></li>
+    <li class="korian"><a href="songs/korian23.mp3">YESEO -   Night Night</a></li>
+    <li class="korian"><a href="songs/korian24.mp3">4K 60P 180713 SUPERBEE x twlv -  by </a></li>
+    <li class="korian"><a href="songs/korian25.mp3">Jae Young - Su-Saek </a></li>
+    <li class="korian"><a href="songs/korian26.mp3">Painting  Art Laybn </a></li>
+    <li class="korian"><a href="songs/korian27.mp3">SUZY  ,HOLIDAY Feat DPR LIVE, M_V</a></li>
+    <li class="korian"><a href="songs/korian28.mp3">ANTHRAX - Fight Em Til You Cant OFFICIAL TRACK</a></li>
+    <li class="korian"><a href="songs/korian29.mp3">CUTE NCT 127 127 - TOUCH  Inkigayo 20180408</a></li>
+    <li class="korian"><a href="songs/korian30.mp3">Hoody  - Why Feat  GeorgeProd Slom ENG_CHN</a></li>
+    <li class="korian"><a href="songs/korian31.mp3">Lee Jin Ah - RUN with GRAY </a></li>
+    
+  </ul>
+  <ul style="list-style-image: url('mu.png'); " id="section3">
+    <li class="english"><a href="songs/eng5.mp3">In Balance</a></li>
+    <li class=english><a href="songs/eng6.mp3">Weightless </a></li>
+    <li class=english><a href="songs/eng14.mp3">Lil Nas X - Old Town Road ft Billy </a></li>
+    <li class=english><a href="songs/eng15.mp3">Sia cheap thrills</a></li>
+    <li class="english"><a href="songs/eng33.mp3">Kim Petras - Heart to Break Live on the Honda Stage at iHeartRadio New York</a></li>
+    <li class="english"><a href="songs/eng34.mp3">King Princess - 1950</a></li>
+    <li class="english"><a href="songs/eng35.mp3">Zedd Grey - The Middle Lyrics ft Maren Morris</a></li>
+    <li class="english"><a href="songs/eng36.mp3">Ariana Grande - No Tears Left To Cry Lyrics</a></li>
+    <li class="english"><a href="songs/eng37.mp3">Childish Gambino - This Is America Official Video</a></li>
+    <li class="english"><a href="songs/eng38.mp3">Kendrick Lamar SZA - All The Stars</a></li>
+    <li class="english"><a href="songs/eng39.mp3">Troye Sivan quotMy My Myquot Official Lyrics amp Meaning  Verified</a></li>
+    <li class="english"><a href="songs/eng9.mp3">DJ Shah – Mellomaniac </a></li>
+    <li class="english"><a href="songs/eng40.mp3">Drake - Nice For What</a></li>
+    
+    <li class="hindi"><a href="songs/hindi5.mp3">Zindgi pyaar ka geet hai </a></li>
+    <li class="hindi"><a href="songs/hindi6.mp3">O mere dil ke chan - Mere jeevan saathi</a></li>
+    <li class="hindi"><a href="songs/hindi11.mp3">Zindagi na milegi dobara Seorita con subtitulos espaol</a></li>
+    <li class="hindi"><a href="songs/hindi21.mp3">Enna Sona</a></li>
+    <li class="hindi"><a href="songs/hindi22.mp3">Kar Gayi Chull</a></li>
+    <li class="hindi"><a href="songs/hindi24.mp3">Aankh Marey simba</a></li>
+    <li class="hindi"><a href="songs/hindi2.mp3">Hawayein</a></li>
+    <li class="hindi"><a href="songs/hindi28.mp3">Nachde Ne Saare Bollywood Dance</a></li>
+    <li class="hindi"><a href="songs/hindi33.mp3">The Jawaani</a></li>
+    <li class="hindi"><a href="songs/hindi4.mp3" >Channa Mereya</a></li>
+    <li class="hindi"><a href="songs/hindi42.mp3">Chogada</a></li>
+    <li class="hindi"><a href="songs/hindi29.mp3">Bulleya  Ae Dil Hai Mushkil</a></li>
+    <li class="hindi"><a href="songs/hindi32.mp3">Mumbai Dilli Di Kudiyaan</a></li>
+    
+    <li class="punjabi"><a href="songs/pbi5.mp3">Khaab</a></li>
+    <li class="punjabi"><a href="songs/pbi6.mp3">5 Taara</a></li>
+    <li class="punjabi"><a href="songs/pbi16.mp3">Guru Randhawa Morni Banke</a></li>
+    <li class="punjabi"><a href="songs/pbi12.mp3">Jind Mahi</a></li>
+   <li class="punjabi"><a href="songs/pbi24.mp3">Kya Baat Ay</a></li>
+   <li class="punjabi"><a href="songs/pbi25.mp3">Mere Wala Sardar</a></li>
+   <li class="punjabi"><a href="songs/pbi26.mp3">Putt Jatt Da</a></li>
+   <li class="punjabi"><a href="songs/pbi31.mp3">galiyan mithiya</a></li>
+   <li class="punjabi"><a href="songs/pbi35.mp3">Diljit Dosanjh Do You know</a></li>
+   <li class="punjabi"><a href="songs/pbi34.mp3">Woofer</a></li>
+   <li class="punjabi"><a href="songs/pbi11.mp3">Nikle current</a></li>
+   <li class="punjabi"><a href="songs/pbi39.mp3">Lamborghini</a></li>
+   <li class="punjabi"><a href="songs/pbi32.mp3">Ambar Sare De Papad</a></li>
+   
+    <li class="korian"><a href="songs/korian5.mp3">Unjin and Sunji - Summer Dream</a></li>
+    <li class="korian"><a href="songs/korian6.mp3">BTS - Love Maze</a></li>
+    <li class="korian"><a href="songs/korian32.mp3">Christina Aguilera - Like I Do Audio ft GoldLink</a></li>
+    <li class="korian"><a href="songs/korian33.mp3">iKON -  LOVE SCENARIO M_V</a></li>
+    <li class="korian"><a href="songs/korian34.mp3">SEOULIVE CLUB 33 KIRIN X SUMIN Feat   Jason Lee -   Nan Baboya</a></li>
+    <li class="korian"><a href="songs/korian35.mp3">SOMA _   ALMOND BLOSSOM  LYRICS</a></li>
+    <li class="korian"><a href="songs/korian1.mp3">Agust D give it to me MV</a></li>
+    <li class="korian"><a href="songs/korian2.mp3">bambu su kakemono</a></li>
+    <li class="korian"><a href="songs/korian36.mp3">Christina Aguilera - Like I Do Audio ft GoldLink</a></li>
+    <li class="korian"><a href="songs/korian38.mp3">SEOULIVE CLUB 33 KIRIN X SUMIN Feat   Jason Lee -   Nan Baboya</a></li>
+    <li class="korian"><a href="songs/korian40.mp3">blackpink - Forever</a></li>
+    <li class="korian"><a href="songs/korian41.mp3">Polarfront - Baikal EP AM007</a></li>
+    <li class="korian"><a href="songs/korian42.mp3">SHAUN -  feat  OVAN amp SUMIN Music Video</a></li>
+    
+    </ul>
+  <ul style="list-style-image: url('mu.png'); " id="section4">
+    <li class="english"><a href="songs/eng7.mp3">One Step Closer</a></li>
+    <li class="english"><a href="songs/eng8.mp3">The Script - The Man Who Cant Be Moved </a></li>
+    <li class="english"><a href="songs/eng16.mp3">Justin Timberlake - Say Something Official Video ft Chris Stapleton</a></li>
+    <li class=english><a href="songs/eng15.mp3">Sia cheap thrills</a></li>
+    <li class="english"><a href="songs/eng33.mp3">Kim Petras - Heart to Break Live on the Honda Stage at iHeartRadio New York</a></li>
+    <li class="english"><a href="songs/eng25.mp3" >John Mayer - New Light Lyrics</a></li>
+    <li class="english"><a href="songs/eng36.mp3">Ariana Grande - No Tears Left To Cry Lyrics</a></li>
+    <li class="english"><a href="songs/eng4.mp3" >Passenger - Let Her Go Cover  Eastern Lights  Jack Tracks </a></li>
+    <li class="english"><a href="songs/eng12.mp3" >Han rom like sweet kiss like coffee</a></li>
+    <li class="english"><a href="songs/eng23.mp3" >The Weeknd - Call Out My Name</a></li>
+    <li class="english"><a href="songs/eng19.mp3">saint jhn - quotLustquot ft Janelle</a></li>
+    <li class="english"><a href="songs/eng10.mp3">Coldplay – Strawberry Swing</a></li>
+    <li class=english><a href="songs/eng15.mp3">Sia cheap thrills</a></li>
+    
+    <li class="hindi"><a href="songs/hindi7.mp3">Iktara</a></li>
+    <li class="hindi"><a href="songs/hindi8.mp3">Patakha Gudi</a></li>
+    <li class="hindi"><a href="songs/hindi13.mp3">Bharat Slow Motion Song</a></li>
+    <li class="hindi"><a href="songs/hindi29.mp3">Bulleya  Ae Dil Hai Mushkil</a></li>
+    <li class="hindi"><a href="songs/hindi34.mp3">Naina Song</a></li>
+    <li class="hindi"><a href="songs/hindi37.mp3">Roke Na Ruke Naina Video Song</a></li>
+    <li class="hindi"><a href="songs/hindi38.mp3">Gud nal isq mitha</a></li>
+    <li class="hindi"><a href="songs/hindi39.mp3">Mere angane mein tumhara</a></li>
+    <li class="hindi"><a href="songs/hindi40.mp3">Naina Da Kya Kasoor</a></li>
+    <li class="hindi"><a href="songs/hindi44.mp3">Samay Ka Pahiya</a></li>
+    <li class="hindi"><a href="songs/hindi41.mp3">SANJU Main Badhiya Tu Bhi Badhiya</a></li>
+    <li class="hindi"><a href="songs/hindi10.mp3">Life is Crazy</a></li>
+    <li class="hindi"><a href="songs/hindi23.mp3">She Move It Like</a></li>
+    
+    <li class="punjabi"><a href="songs/pbi7.mp3">Ehsaas</a></li>
+    <li class="punjabi"><a href="songs/pbi8.mp3">angry subha</a></li>
+    <li class="punjabi"><a href="songs/pbi17.mp3">sab fade jaange</a></li>
+   <li class="punjabi"><a href="songs/pbi32.mp3">Ambar Sare De Papad</a></li>
+   <li class="punjabi"><a href="songs/pbi39.mp3">Mann Bharrya</a></li>
+   <li class="punjabi"><a href="songs/pbi40.mp3">Jatt yamla</a></li>
+   <li class="punjabi"><a href="songs/pbi41.mp3">Rondi</a></li>
+   <li class="punjabi"><a href="songs/pbi42.mp3">Qismat</a></li>
+   <li class="punjabi"><a href="songs/pbi16.mp3">quotRaashi Soodquot Bewafa Hunde Ne</a></li>
+   <li class="punjabi"><a href="songs/pbi29.mp3">slowly slowly</a></li>
+   <li class="punjabi"><a href="songs/pbi4.mp3">teri yaadein</a></li>
+  <li class="punjabi"><a href="songs/pbi27.mp3">Sakhiyaan</a></li>
+   <li class="punjabi"><a href="songs/pbi14.mp3">Sip sip</a></li>
+   
+    <li class="korian"><a href="songs/korian7.mp3">Say Sue Me - Old Town</a></li>
+    <li class="korian"><a href="songs/korian8.mp3"> Gugudan - The Boots</a></li>
+    <li class="korian"><a href="songs/korian43.mp3">MV SUNMI _ Siren</a></li>
+    <li class="korian"><a href="songs/korian44.mp3">CIFIKA - WATER</a></li>
+    <li class="korian"><a href="songs/korian45.mp3">PENOMECO  'No5 Feat Crush MV</a></li>
+    <li class="korian"><a href="songs/korian46.mp3">SHINee Good Evening MV</a></li>
+    <li class="korian"><a href="songs/korian47.mp3">MV PENTAGON _ Shine</a></li>
+    <li class="korian"><a href="songs/korian18.mp3">Giriboy - acrnm Prod By  Feat Goretexx </a></li>
+    <li class="korian"><a href="songs/korian19.mp3">GodDy</a></li>
+    <li class="korian"><a href="songs/korian1.mp3">Agust D give it to me MV</a></li>
+    <li class="korian"><a href="songs/korian2.mp3">bambu su kakemono</a></li>
+    <li class="korian"><a href="songs/korian40.mp3">BLACKPINK - Forever </a></li>
+    <li class="korian"><a href="songs/korian41.mp3">Polarfront - Baikal EP AM007</a></li>
+    
+  </ul>
+  <ul style="list-style-image: url('mu.png'); " id="section5">
+    <li class="english"><a href="songs/eng9.mp3">DJ Shah – Mellomaniac </a></li>
+    <li class="english"><a href="songs/eng10.mp3">Coldplay – Strawberry Swing</a></li>
+    <li class="english"><a href="songs/eng17.mp3" >If I had majic</a></li>
+    <li class="english"><a href="songs/eng18.mp3" >You Can Count on me like 1 2 3 by Bruno Mars</a></li>
+    <li class="english"><a href="songs/eng7.mp3">One Step Closer</a></li>
+    <li class=english><a href="songs/eng14.mp3">Lil Nas X - Old Town Road ft Billy </a></li>
+    <li class="english"><a href="songs/eng20.mp3" >BlocBoy JB Drake - Look Alive Lyrics</a></li>
+    <li class="english"><a href="songs/eng24.mp3" >Christine and The Queens Girlfriend feat Dm Funk LYRICS</a></li>
+    <li class="english"><a href="songs/eng22.mp3" >Khalid Normani - Love Lies Lyrics</a></li>
+    <li class="english"><a href="songs/eng40.mp3">Drake - Nice For What</a></li>
+    <li class="english"><a href="songs/eng41.mp3">Cardi B Bad Bunny amp J Balvin - I Like It</a></li>
+    <li class="english"><a href="songs/eng25.mp3" >John Mayer - New Light Lyrics</a></li>
+    <li class="english"><a href="songs/eng36.mp3">Ariana Grande - No Tears Left To Cry Lyrics</a></li>
+    
+    <li class="hindi"><a href="songs/hindi9.mp3">Ilahi</a></li>
+    <li class="hindi"><a href="songs/hindi10.mp3">Life is Crazy</a></li>
+    <li class="hindi"><a href="songs/hindi23.mp3">She Move It Like</a></li>
+    <li class="hindi"><a href="songs/hindi28.mp3">Nachde Ne Saare Bollywood Dance</a></li>
+    <li class="hindi"><a href="songs/hindi30.mp3">Mera Joota Hai Japani</a></li>
+    <li class="hindi"><a href="songs/hindi32.mp3">Mumbai Dilli Di Kudiyaan</a></li>
+    <li class="hindi"><a href="songs/hindi33.mp3">The Jawaani</a></li>
+    <li class="hindi"><a href="songs/hindi35.mp3">Kedarnath  Qaafirana</a></li>
+    <li class="hindi"><a href="songs/hindi36.mp3">quotDum Maaro Dumquot</a></li>
+    <li class="hindi"><a href="songs/hindi41.mp3">SANJU Main Badhiya Tu Bhi Badhiya</a></li>
+    <li class="hindi"><a href="songs/hindi43.mp3">Daryaa</a></li>
+    <li class="hindi"><a href="songs/hindi42.mp3">Chogada</a></li>
+    <li class="hindi"><a href="songs/hindi35.mp3">Kedarnath  Qaafirana</a></li>
+    
+    <li class="punjabi"><a href="songs/pbi9.mp3">Kali Gaddi - Sidhu Moose Wala </a></li>
+    <li class="punjabi"><a href="songs/pbi10.mp3">i need ya</a></li>
+    <li class="punjabi"><a href="songs/pbi29.mp3">slowly slowly</a></li>
+   <li class="punjabi"><a href="songs/pbi30.mp3">dhol vajea</a></li>
+   <li class="punjabi"><a href="songs/pbi35.mp3">Diljit Dosanjh Do You know</a></li>
+   <li class="punjabi"><a href="songs/pbi34.mp3">Yaar Da Vyah</a></li>
+   <li class="punjabi"><a href="songs/pbi39.mp3">Lamborghini</a></li>
+   <li class="punjabi"><a href="songs/pbi38.mp3">Gaal Ni Kadni</a></li>
+   <li class="punjabi"><a href="songs/pbi40.mp3">Jatt yamla</a></li>
+   <li class="punjabi"><a href="songs/pbi16.mp3">Morni Banke</a></li>
+   <li class="punjabi"><a href="songs/pbi17.mp3">sab fade jaange</a></li>
+   <li class="punjabi"><a href="songs/pbi39.mp3">Mann Bharrya</a></li>
+   <li class="punjabi"><a href="songs/pbi18.mp3">coka</a></li>
+
+    <li class="korian"><a href="songs/korian9.mp3">fromis_9 - Love Bomb</a></li>
+    <li class="korian"><a href="songs/korian10.mp3">Apink - I'm So Sick</a></li>
+    <li class="korian"><a href="songs/korian11.mp3">Golden Hour</a></li>
+    <li class="korian"><a href="songs/korian43.mp3">MV SUNMI _ Siren</a></li>
+    <li class="korian"><a href="songs/korian44.mp3">CIFIKA - WATER</a></li>
+    <li class="korian"><a href="songs/korian45.mp3">PENOMECO  'No5 Feat Crush MV</a></li>
+    <li class="korian"><a href="songs/korian46.mp3">SHINee Good Evening MV</a></li>
+    <li class="korian"><a href="songs/korian47.mp3">MV PENTAGON _ Shine</a></li>
+    <li class="korian"><a href="songs/korian22.mp3">pH-1 - Penthouse Feat Sik-K Prod APRO</a></li>
+    <li class="korian"><a href="songs/korian23.mp3">YESEO -   Night Night</a></li>
+    <li class="korian"><a href="songs/korian24.mp3">4K 60P 180713 SUPERBEE x twlv -  by </a></li>
+    <li class="korian"><a href="songs/korian6.mp3">BTS - Love Maze</a></li>
+    <li class="korian"><a href="songs/korian32.mp3">Christina Aguilera - Like I Do Audio ft GoldLink</a></li>
+    
+  </ul>
+
+</div>
+</div>
+<br>
+<div class="col-md-3" style="padding: 0px;">
+	<center>
+<div id=add2 data-spy=affix data-offset-top="380">
+<img src="m1.jpg" alt="music"style="margin-right:10px;" >
+<br><br>
+<audio controls id=audio src="" autoplay></audio>
+</center>
+</div>
+</div> 
+
+</body>
+</html>

@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="short icon" type="image" href="logo4.png">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<style>
+
+    div#memory_board{
+        background: #ccc;
+        border:#999 1px solid;
+        max-width: 800px;
+        height:540px;
+        padding: 24px;
+        margin: 0px auto;
+        display: none;
+    }
+    div#memory_board > div{
+        background: url(title_bg.png) ;
+        border: #000 1px solid;
+        width: 71px;
+        height: 71px;
+        float:left;
+        margin: 10px;
+        padding: 20px;
+        font-size: 64px;
+        cursor:pointer;
+        text-align: center;
+        
+    }
+    #time{
+    font-size:46px; 
+top: 0px; 
+left: 0px; 
+display: none; 
+text-align:left;
+float: left;
+}
+
+#start
+{ 
+width: 50px; 
+padding: 10px 15px; 
+text-align: center; 
+font:bold 15px arial; 
+background-color: #dedede; 
+color: #000; 
+-webkit-border-radius: 6px; 
+-moz-border-radius: 6px; 
+position: absolute; 
+} 
+
+#score
+{
+font-size:46px; 
+top: 0px; 
+right: 50px; 
+display: none; 
+text-align:right;
+float: right; 
+} 
+
+</style>    
+<script>
+var memory_array=['A','A','B','B','C','C','D','D','E','E','F','F','G','G','H','H','I','I','J','J','K','K','L','L'];
+var memory_value=[];
+var memory_title_ids=[];
+var title_flipped=0;
+var code=0;
+Array.prototype.memory_title_shuffle=function(){
+var i=this.length,j,temp;
+while(--i>0){
+    j=Math.floor(Math.random()*(i+1));
+    temp=this[j];
+    this[j]=this[i];
+    this[i]=temp;
+}
+}
+function newBoard(){
+        title_flipped=0;
+        var output='';
+        memory_array.memory_title_shuffle();
+        for(var i=0;i<memory_array.length;i++){
+            output+='<div id="title_'+i+'" onclick="memoryFlipTile(this,\''+memory_array[i]+'\')"></div>';
+        }
+ document.getElementById('memory_board').innerHTML=output;       
+}
+function memoryFlipTile(tile,val){
+    if(tile.innerHTML=="" && memory_value.length<2){
+        tile.style.background='#ffff';
+        tile.innerHTML=val;
+        if(memory_value.length==0){
+            memory_value.push(val);
+            memory_title_ids.push(tile.id);
+        }
+        else if(memory_value.length==1)
+            {
+                 memory_value.push(val);
+            memory_title_ids.push(tile.id);
+                if(memory_value[0]==memory_value[1])
+                	{
+                		title_flipped+=2;
+                        code+=50
+                        $("#score").html("Score: "+code);
+                memory_value=[];
+                memory_title_ids=[];
+                if(title_flipped==memory_array.length)
+                    {
+
+                       /* alert("Board cleared ... generating new board");*/
+                        document.getElementById('memory_board').innerHTML="";
+                        newBoard();
+                        
+                    }
+                }
+                else {
+                    function flip2back(){
+                        var tile_1=document.getElementById(memory_title_ids[0]);
+                        var tile_2=document.getElementById(memory_title_ids[1]);
+                        tile_1.style.background='url(title_bg.png) no-repeat';
+                        tile_1.innerHTML="";
+                        tile_2.style.background='url(title_bg.png) no-repeat';
+                        tile_2.innerHTML="";
+                        memory_value=[];
+                        memory_title_ids=[];
+                    }
+                    setTimeout(flip2back,200);
+                }
+            }
+        
+    }
+}
+ $(document).ready(function(){
+            var width = screen.width - 100;
+var height = screen.height - 200;
+var time=0;
+$('#start').css(
+{ 
+"top" : (height/2)+'px', 
+"left" : (width/2)+'px' 
+});
+
+function timing()
+{
+time=-time-1;
+time=-time;
+$('#time').html('Time: '+time+'sec');
+if(time>=30){
+    $('body').empty();
+    $('body').append("<center><div><br><br><br><br><br><br><br><br><br><br><h1>Time Up!</h1>\
+        <h2>Your Score is: "+ code +" Points</h2></div></center")
+    return;
+}
+
+setTimeout(timing, 1000);
+}
+
+$('#start').click( function()
+{
+$(this).fadeOut('slow');
+$('#memory_board').show();
+$('#time').show();
+$('#score').show()
+timing();
+});
+
+        })
+</script>
+</head>
+<body>
+    <div id=time >Time: 0</div>
+    <div id=score>Score: 0</div>
+    <div id=start>Start</div>
+    <br>
+<div id="memory_board"></div>    
+<script>newBoard()</script>
+</body>
+</html>

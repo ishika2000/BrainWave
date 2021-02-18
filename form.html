@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>BrainWave</title>
+  <link rel="short icon" type=image href="logo4.png">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+  <style>
+  	label,ul,.btn{
+  		font-weight: 100;
+  		font-size:18px;
+  	}
+  </style>
+</head>
+<body>
+
+<div class="container-fluid">
+	<div class=row>
+		<div class=col-md-7 style="background: #fff">
+<table class="table">
+<tr>
+	<td id=td1 style="vertical-align: bottom;">
+			<ul class="nav nav-tabs">
+				<li class=active><a href=#signup data-toggle=tab >Sign Up</a></li>
+				<li><a href=#signin data-toggle=tab>Sign In</a></li>
+			</ul>
+			<br>
+		</td>
+	</tr>
+	<tr>
+		<td  style="vertical-align: top;">
+	<div class=tab-content>
+	<div class="tab-pane fade in active" id=signup>
+		<form action="post">
+			<div class="form-group">
+				<label for=uname>Username:</label>
+			<div class="input-group">
+				<i class=input-group-addon><i class="glyphicon glyphicon-user"></i></i>
+				<input type=text name=uname id=uname  class=form-control placeholder="Username...">
+			</div></div>
+			<div class="form-group">
+				<label for=pass>Password:</label>
+			<div class=input-group id=end1>
+				<i class=input-group-addon><i class="glyphicon glyphicon-lock"></i></i>
+				<input type=password name=pass id=pass  class=form-control placeholder="Password...">
+			</div></div>
+			<div class="form-group ">
+			<div class=checkbox>
+				<label for=ch>
+					<input type=checkbox name=remember id=ch >
+					Remember Me
+				</label>
+			</div></div>
+			<a class="btn btn-warning" href=# id=sup>Sign Up</a>
+		</form>
+	</div>
+	<div class="tab-pane fade" id=signin>
+		
+		<form action="post">
+			<div class="form-group nam">
+				<label for=uname2>Username:</label>
+			<div class=input-group id=s1>
+				<i class=input-group-addon><i class="glyphicon glyphicon-user"></i></i>
+				<input type=text name=uname1 id=uname2 class=form-control placeholder="Username">
+			</div></div>
+			<div class="form-group pas">
+				<label for=pass2>Password:</label>
+			<div class=input-group id=s2>
+				<i class=input-group-addon><i class="glyphicon glyphicon-lock"></i></i>
+				<input type=password name=pass1 id=pass2  class=form-control placeholder="password">
+			</div></div>
+			<div class="form-group pas">
+				<label for=conpass>Confirm Password:</label>
+			<div class=input-group id=end2>
+				<i class=input-group-addon><i class="glyphicon glyphicon-lock"></i></i>
+				<input type=password name=pass2 id=conpass  class=form-control placeholder=" Confirm password">
+			</div></div>
+			
+			<div class="checkbox">
+				<label for=check>
+					<input type=checkbox name=terms id=check >
+					You Agree with all our terms and conditions
+				</label>
+			</div>
+			
+			<a class="btn btn-warning disabled" href="#" data-toggle="modal" id=sin>Sign In</a>
+		</form>
+	</div>
+
+		</div>
+</td>
+</tr>
+</table>
+	</div>
+
+		<div class="col-md-5">
+			<img id=login src=sidelogin.png alt=brainwave width="100%">
+		</div>
+</div>
+
+<div class="modal fade" id=mod>
+	<div class=modal-dialog>
+		<div class=modal-content>
+			<div class=modal-header>
+				
+			</div>
+			<div class=modal-body>
+				<h3 class="modal-title">Congrats</h3>
+				<p>
+					You have been successfuly registered in Brainwave. 
+					You have chose a right place for your development.
+
+					Hope you enjoy with us.
+					<h4 style="text-align: right;">Team BrainWave</h4>
+					<a href=brain-latest.html class="btn btn-info">Proceed with BrainWave</a>
+			</p>
+			</div>
+			<div class=modal-footer>
+				
+			</div>
+		</div>
+	</div>
+</div>
+
+</div>
+<script>
+	$(document).ready(function(){
+		var h=$(window).height();
+		$("#login").height(h);
+		$("table").height(h-22)
+		$("#td1").height((h-22)/4);
+		$("table,td,tr").css("border","0px");
+		$(".form-group").addClass("form-group-lg");
+		$("#check").click(function(){
+			$("#sin").removeClass("disabled");
+		});
+		$("#sup").mouseenter(function(){
+			var name=$("#uname").val();
+			var pwd=$("#pass").val();
+			if((name=="Priyanshi Gupta"&&pwd=="priya123")||(name=="Ishika Singla"&& pwd=="ishika123"))
+			{
+				$("#sup").attr("href","brain-latest.html");
+			}
+			
+		});
+
+		$("#sup").click(function(){
+			if($(this).attr("href")=='#') {
+				$("#end1").after("<span class=help-block style='color:red;'>Enter a valid username or password</span>")
+			}
+		});
+
+
+		$("#sin").mouseenter(function(){
+			var un=$("#uname2").val();
+			var pass=$("#pass2").val();
+			var conpass=$("#conpass").val();
+			
+			if(pass==conpass&&un!="Priyanshi Gupta"&&un!="Ishika Singla")
+				{
+					$("#sin").attr({"data-toggle":"modal","href":"#mod","title":"clickthe jk"});
+				}
+		});
+		$("#sin").click(function(){
+			var un=$("#uname2").val();
+			var pass=$("#pass2").val();
+			var conpass=$("#conpass").val();
+				if(un=="Priyanshi Gupta"||un=="Ishika Singla")
+				{ 	$("#uname2").val(null);
+					$("#s1").after("<span class=help-block style='color:red;'>This username is already registered. Please try another one.</span>");
+					$("#s1").addClass("has-error has-feedback").append("<span class='glyphicon glyphicon-remove form-control-feedback'></span>");
+
+				}
+				else if(un!="Priyanshi Gupta"&&un!="Ishika Singla")
+				{ 	//$("#uname2").val(null);
+					//$("#s1").after("<span class=help-block style='color:red;'>This username is already registered. Please try another one.</span>");
+					$("#s1").append("<span class='glyphicon glyphicon-ok form-control-feedback'></span>");
+					$(".nam").addClass("has-success has-feedback");
+
+				}
+				 if(pass!=conpass)
+				{
+					$("#end2,#s2").append("<span class='glyphicon glyphicon-remove form-control-feedback'></span>");//input-group
+					$(".pas").addClass("has-error has-feedback");//.form-group
+					$("#pass2,#conpass").val(null);//input
+
+				}
+				if(pass==conpass)
+				{
+					$("#end2,#s2").append("<span class='glyphicon glyphicon-ok form-control-feedback'></span>");
+					$(".pas").addClass("has-success has-feedback");
+					//$("#pass2,#conpass").val(null);
+
+				}
+
+			});
+		});
+</script>
+</body>
+</html>

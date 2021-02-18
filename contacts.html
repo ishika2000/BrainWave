@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Brainwave</title>
+  <link rel="short icon" type=image href="logo4.png">
+  
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>  
+
+  <style>
+    #main{
+      margin: 3px 0px;
+    }
+    #content{
+      background: white;
+      border-radius: 5px;
+      box-shadow: 0 8px 8px 0px ;
+      position: relative;
+      padding-top: 0px;
+      margin: 100px 0px;
+    }
+    #content h1{
+      text-transform: capitalize;
+      position: absolute;
+      background-color: #ff66a3;
+      color: white;
+      font-family: serif;
+      width:70%;border-radius: 5px;
+      text-align: center;
+      left:-20px;
+      box-shadow: 0 8px 8px 0px #555;
+    }
+    #content #send{
+      background-color: #ff66a3;
+      color: white;
+      font-family: serif;
+      width:70%;border-radius: 5px;
+      text-align: center;
+       padding: 8px;
+    }
+    #content #send:hover{
+      box-shadow: 0 8px 8px 0px #bbb;
+
+    }
+    form input,textarea{
+      border: hidden;
+      border-radius: 30px;
+      border-bottom: 2px solid #aaa;
+      width:80%;
+      padding: 5px 20px;
+    }
+    textarea
+    {
+      border:1px solid #ddd;
+      border-bottom: 2px solid #aaa;
+
+    }
+    .col-md-7 #sidetext{
+      margin-top: 120px;
+      color: white;
+      font-family: serif;
+    } 
+  </style>
+</head>
+<body>
+<div id=main ng-app="myapp" ng-controller="ctrl">
+
+  <div class="col-md-7" >
+
+    <div id=sidetext>
+    <center>
+      <h1>Get in touch<br>&<br></h1>
+        <h3>Help us know how can we improve..</h3>
+      
+
+    </center>
+    <h4 style="margin-top: 285px; font-family: serif;"><i class="glyphicon glyphicon-phone"></i> Give us a ring</h4>
+    <p style="font-family: serif;letter-spacing: 1px;">Priyanshi Gupta , Ishika Singla<br>+91 62838-99817<br>+91 82627-40179</p>
+  </div>
+  </div>
+  <div class="col-md-3">
+    
+    <div id=content>
+      <h1>contact us</h1>
+      <br><br><br><br><br>
+      <form name=myform >
+      <center>
+        <input type="text" name=fname placeholder="  Your name.." ><br><br>
+        <input type="email" name=mail placeholder="  Your email..*" required ng-model="mail" ><br><br>
+        <textarea placeholder="  Your message..*" rows=7 required ng-model=text name=text></textarea>
+        <button type="submit" class="btn" name="submit" id=send value="Send Message" ng-model=send> Send Message</button>
+      </center>
+      </form>
+    </div>
+  </div>
+  <div class="col-md-2">
+    <br>
+    <div id=submited class="alert alert-success alert-dismissible" ng-show="myform.mail.$valid&&myform.text.$valid&&myform.submit.$touched"style="top:50px;right:50px; height: 100px; width:200px;display:none;">
+  <a class=close data-dismiss=alert>&times;</a>
+  <b>Your feedback has been succesfully sent.</b>
+</div>
+
+  </div>
+</div>
+</body>
+<script>
+ var app=angular.module("myapp",[]);
+    app.controller("ctrl",function($scope){
+
+    })
+   
+  $(document).ready(function(){
+    var h=$(window).height();
+    $("#main").height(h-6).css("background","#337ab7");
+    $("#content").height(h-200);
+    $("input,textarea").focus(function(){
+      $(this).css("outline","none").css("background-color","#ffcce3");
+    })
+    $("#send").click(function(){
+      
+      {
+      
+      $("#submited").show(1000,function(){$("input,textarea").val(null);});
+      $("#submited").animate({boxShadow:'0 16px 16px 0px #555'},4000);
+      $("#submited").slideUp();
+      }
+      
+
+    })
+  })
+</script>
+</html>

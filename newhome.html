@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>BrainWave</title>
+  <link rel="short icon" type=image href="logo4.png">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+  <style>
+  
+    .affix{
+      top:0px;
+      width:100%;
+      z-index: 9999;
+    }
+.navbar-inverse .collapse .nav li  a{
+        font-size: 20px;
+        color:white;
+        font-family: sans-serif;
+      }
+ .navbar-inverse .collapse .nav li  a:hover{
+        text-decoration: none;
+        font-size: 23px;
+        
+      }
+      .popover {
+    background: #ccc;
+    box-shadow: none;
+    width: 250px;
+    z-index: 99999;
+      }
+    .popover.bottom .arrow:after {
+        border-bottom-color: #ccc;
+    }
+.right{ float: right; }
+.left{float: left;}
+   .navbar-inverse{
+    background: #337ab7;
+  }
+    #load{
+    background-color: red;
+    height: 657px;
+    max-width: 1366px;
+
+  }
+  #load{
+    background-color: red;
+    height: 657px;
+    max-width: 1366px;
+
+  }
+  .progress{
+    width: 90%;
+    margin: auto;
+
+  }
+  div,p{display: none;}
+    #load,#load>div,#load>p{display:block;}
+    #load>p{
+      text-align: center;
+      color: white;
+      font-size: 50px;
+    }
+    .progress-bar{display: block;}
+   img{z-index: 1;}
+  </style>
+</head>
+<body>
+  <div id=load>
+    <p><br><br><br><br></p>
+    <div class="progress">
+        <div class="progress-bar progress-bar-info progress-bar-striped active" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" style="width:0%">
+        </div>
+    </div>
+    <p>Loading...</p> 
+  </div>
+  
+  <div class=row>
+  <div class="col-md-3 col-xs-12">
+    <center><a href=brain-latest.html><img src="wave.png" height="63px" width=auto style="margin-top: 10px;"></a></center>
+  </div>
+  <div class="col-md-9" id=top_text>
+    <p class="text-uppercase navbar-text" style="float: right;font-family:sans-serif;word-spacing: 5px;letter-spacing: 2px;font-size: 17px; padding-left:10px;"><br>A wave to make india mentally strong and relaxed</p>
+  </div>
+  </div>
+  <nav class=" navbar-inverse " data-spy=affix data-offset-top=90>
+    <div class=navbar-header>
+  <a type="button" class="navbar-toggle btn btn-default" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav">
+        <li><a href=#>Power Mind</a></li>
+        <li><a href=# data-trigger=focus data-toggle=popover data-placement=bottom data-content="<li><a href=yoga.html>Crossword Puzzle </a> </li> <li><a href=#>Racing</a></li><li><a href=# >Sudoku</a></li>">Games</a></li>
+        <li><a href=#>Music</a></li>
+        <li><a href=# data-trigger=focus data-toggle=popover data-placement=bottom data-content="<li><a href=quotesMotivation.html>Motivational Quotes </a> </li> <li><a href=motvid.html>Motivational Videos</a></li><li><a href=testmotlev.html >Motivation Level Test</a></li>">Motivation</a></li>
+        <li><a href=#>Yoga</a></li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <form class="navbar-form">
+        <div class=input-group>
+        <input type="text" id=search name="search" placeholder="search" class="form-control">
+        <div class="input-group-btn">
+          <button class="btn btn-default"><span class="glyphicon glyphicon-search"></span></button>
+        </div>
+        </div>
+        </form>
+      </ul>
+  </nav>
+  <br><br><br><br><br><br><br><br><br><br><br><br>
+  <a href="powermind.html" target="_blank"><div id=div4>
+    <img src="power.png" class="image">
+  </div></a>
+  <a href="brainwave.html" target="_blank"><div id="img2">
+    <img src="img2.png" class="image" >
+  </div></a>
+  <a href="brainwave.html" target="_blank"><div id=div3>
+    
+    <img src=music.png class="image">
+  </div></a>
+  <div id=div6 style="padding: 0px;">
+    <img src=dreams.jpg id=imgrp style="float: right;width:40%;">
+    <div id=grp class="btn-group-vertical btn-group-lg" style="width:60%;height: auto;" >
+      <a href=motvid.html class="btn btn-success" role=button target=_blank>Motivational Videos <span class=badge>50+</span></a>
+      <a href=quotesmotivation.html target=_blank class="btn btn-warning">Motivational Quotes</a>
+      <a href=testmotlev.html class="btn btn-danger" target=_blank>Test Your Motivation level</a>
+      <h2 id=s>DO'<del>NT QU</del>IT</h2>
+    </div>
+  </div>
+  <a href="yoga.html" target="_blank"><div id=div5>
+    <img src="med.png" class=image>
+  </div></a>
+  
+  
+  <script>
+    
+      $(window).resize(function(){
+        if($(window).width()<=768)
+      {
+        $('#top_text').hide();
+      }
+      else 
+      {
+        $('#top_text').show();
+      }
+      });
+     
+      $('[data-toggle=popover]').popover({
+        html:true
+      });
+  </script>
+
+  <script>
+    $(document).ready(function(){
+    $(".progress-bar").animate({width:"100%"},"fast",function(){
+      
+      $("div,p").fadeIn();
+      $("#load").fadeOut(600);
+
+    });
+    
+        });
+    
+  </script>
+</body>
+</html>

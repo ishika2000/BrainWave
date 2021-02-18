@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+<head><title>BrainWave</title>
+	<link rel="short icon" type=image href=logo4.png>
+	<style>
+		*{
+				padding: 0px;
+				margin: 0px;
+			}
+		#ab{
+				margin-left: 31%;
+				margin-top: 17%;
+				border:1px solid white;
+			}
+		#img1{
+				background: dodgerblue url("img1.jpg");
+				width:1347px;
+				height:657px;
+
+			}
+		#img2{
+				background-image:  url("img2.jpg");
+				width:1347px;
+				height: 657px;
+			}
+		#abc{
+				font-family:sans-serif;
+				text-transform: uppercase;
+				word-spacing: 5px;
+				letter-spacing: 2px;
+				text-align: center;
+				color: white;
+				font-weight: thick;
+			}
+		.p1{
+				font-size: 50px;
+				color: white;
+				margin-top:8%;
+				margin-left: 8%;
+				position: absolute;
+			}
+		#c{
+			font-size: 55px;
+			color: orange;
+			margin-top:38%;
+			margin-left: 13%;
+			position: absolute;
+		}
+		#c1{
+				color:darkorange;
+				font-size: 58px;
+			}
+		#div3{
+				background-color: darkorange;
+				height:657px;
+			}
+			#d{
+				font-size: 50px;
+				color: white;
+				text-align: center;padding-top: 100px;
+			}
+		.hide{display: none;
+				color: white;
+				font-size: 20px;
+				
+			}
+			#p2{display: none;
+				color: white;
+				font-size: 20px;
+				margin-top: 40px;
+			}
+			#collage{
+				display:none;
+			}
+			#m1,#m2,#m3,#m4,#a{float:left;}
+			#m1{font-size: 90px;color: purple;}
+			#m2{font-size: 70px;color: red;}
+			#m3{font-size: 80px;color:slateblue;}
+			#m4{font-size:5em;color:green;}
+			#div4{
+				height:657px;
+			}
+			#div5{background: url(meditationc.jpg) no-repeat ;
+				height: 657px;}
+				[href]{text-decoration:none;color: black}
+			</style>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+	<script>
+		$(document).ready(function(){
+		
+			$("#ab").hover(function(){
+				$("#img1").css("background-image","none");
+				$("#p2").show();
+			},
+			function(){
+				//$("#img1").css("background-image","url(img1.jpg)");
+				$("#p2").hide();
+				$(".hide").hide();
+			});
+			$("#ab").click(function(){
+				
+				$(this).hide();
+				//$("#img1").css("background-image","url(collage.png)");
+				$("#abc").hide();
+				
+				$("#collage").show();
+			})
+				});
+		
+	</script>
+</head>
+<body>
+	<div id="img1">
+		<img id=ab src="wave1.png" >
+		<img id=collage src=collage1.png usemap="#map">
+		<map name=map>
+			<area shape=poly coords="87,0,0,205,339,340,420,135" href="#div6" title="Feeling low. Need a boost. Watch a motivational Video by Experts">
+			<area shape=poly coords="400,10,390,122,420,137,380,240,375,290,560,310,790,290,810,50" href="#div5" title="Are you Tensed. Wanna relax. Come join us in our yoga classes.">
+			<area shape=poly coords="805,135,1145,42,1210,272,870,367" href="#img2" title="Sharpen your mind by drilling it with interesting and mind consiming games.">
+			<area shape=poly coords="390,325,845,290,865,540,410,580" href="#div3" title="Music can heal many wounds. It requires right music choice at right time. Choose music according to your choice here. ">
+			<area shape="rect" coords="0,480,290,682" href="#div4" title="Know the power of your mind">
+		
+		</map>
+		<p id=abc ><br>A wave to make india mentally strong and relaxed</p>
+		<center><p id=p2>Know what all we can do for you by a click.</p></center>
+		</div>
+	<a href="brainwave.html" target="_blank"><div id="img2">
+		<p class=p1>Wanna recreation & enjoyment<br>&nbsp &nbsp &nbsp Wanna hone your skills.</p>
+		<p id=c>With a essence of <span id=c1>Memory Sharpening</span> games</p>
+	</div></a>
+	<a href="brainwave.html" target="_blank"><div id=div3>
+		<p id=d>Listen to the Old and Gold Soothing music with us<br>And dump all your tensions and worries.</p>
+		<p id=m1>&#9833 </p>
+		<p id=m2>&#9835</p>
+		<p id=m3>&#9834</p>
+		<p id=m4>&#9836</p>
+		<img src=star.png id=a>
+		<p id=m4><br><br>&#9833 &nbsp</p>
+		<p id=m1><br>&#9835&nbsp</p>
+		<p id=m3>&#9834 &nbsp</p>
+		<p id=m2><br> &#9836<br></p>
+		<p id=m2><br><br><br> &#9835 &nbsp </p>
+		<p id=m4>&nbsp <br>&#9833</p>
+		<p id=m3>&nbsp &nbsp &#9834 &nbsp</p>
+		<p id=m1><br>&nbsp &#9836</p>
+	</div></a>
+	<a href="brainwave.html" target="_blank"><div id=div4>
+		<p><br></p>
+		<img src=logo1.jpg style="float: left;">
+		<p style="font-size: 90px" >Know the Power of your mind</p>
+		<p style="font-size: 40px"> &nbsp &nbsp ...when you know your mind, you know yourself.<br><br></p>
+		<img src=back.jpg> <img src=pm2.jpg style="float: right;height:350px" >
+		<p style="font-size: 30px;"><br><br><br><br><br>Believe in yourself...<br><font color="red">You can rock the world.</font></p>
+	</div></a>
+	<a href="brainwave.html" target="_blank"><div id=div5><img src="meditation4.jpg" width="375px" height="657px"style="float: right;"><font size="50px">Meditate..</font><br>
+		<font size="45px">Let the light of your heart engulf you.</font>
+	</div></a>
+	<a href="brainwave.html" target="_blank"><div id=div6>
+		<img src="motive.jpg" height="225px">
+		<img src=motive2.jpg height="225px">
+		<img src="motive1.jpg" height="225px">
+		<img src=motive4.jpg height="225px">
+		<img src=motive3.jpg height="225px">
+		<img src=motivating.jpg height="428px" width=780px style="float: left">
+		<img src=dreams.jpg height="428px" width="565px" style="float: left">
+		
+		<!--<marquee behaviour=alternate direction=right><centr><font size=50px>I can and I will. Do it with passion or not at all.</font></center></marquee>-->
+	</div></a>
+</body>
+</html>

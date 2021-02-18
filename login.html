@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>BrainWave > Get Started</title>
+  <link rel="short icon" type=image href="logo4.png">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+  <style>
+  	#start{
+  		/*height: 100px;
+  		width: 100px;*/
+  		border-radius: 50%;
+  		margin: 20px auto;
+  		margin-left: -80px;
+  		  	}
+  	.jumbotron{
+  		background: url(rose.jpg);
+  	}
+  	body{
+  		background:url(y1.jpg) no-repeat 100% 100%;
+  		margin:0px;
+  		padding: 0px;
+  	}
+  	.navbar{
+  		background: white;
+  	}
+  	
+  </style>
+</head>
+<body>
+<nav class="navbar">
+		<div class=navbar-header>
+			<div class="navbar-brand"><img src="wave.png" height="63px" width=auto style="float: left;"></div>
+		</div>
+		<p class="text-uppercase navbar-text" style="float: right;font-family:sans-serif;word-spacing: 5px;letter-spacing: 2px;font-size: 17px; padding-left:10px;"><br>A wave to make india mentally strong and relaxed</p>
+	</nav>
+	
+
+	<div class="container">
+		<div class="jumbotron text-center">
+		<h2 class="text-center" style="color:white;">We provide a wide variety of activities for you..</h2>
+
+		<div class="row">
+			<div class="col-lg-2 col-lg-offset-1" id=a>
+				<div class="thumbnail">
+				 <h3>Play Mind sharpning & entertaining Games</h3>
+			</div>
+			</div>
+			<div class="col-lg-2" id=b>
+				<div class="thumbnail"><h3> Listen to Relaxing & soothing Music </h3>
+				</div>
+			</div>
+			<div class="col-lg-2 " id=c>
+				<div class="thumbnail">
+				<h3> See mirror - Know the Power of mind
+				</h3>
+			</div></div>
+			<div class="col-lg-2 " id=d>
+				<div class="thumbnail">
+				<h3>Regain your motivation when feeling low</h3>
+			</div></div>
+			<div class="col-lg-2 " id=e>
+				<div class="thumbnail">
+				<h3> Join our Meditation and Yoga classes</h3>
+			</div></div>
+		</div>
+	</div>
+</div>
+<div  id=cont>
+<div class=row>
+	<div class=col-md-6>
+<img  src=collage1.png height=150px width="300px" id=img >
+	</div>
+	<div class="col-md-6 " id=button>
+<a class="btn btn-danger text-center active" target="_blank" id=start href="form.html"><h3>Get Started</h3></a>
+	</div>
+</div></div>
+	
+<script>
+	$(document).ready(function(){
+		$("#a").hover(function(){
+			$("#img").attr("src","logo2.jpg");
+		})
+		$("#b").hover(function(){
+			$("#img").attr("src","rm3.jpg");
+		})
+		$("#c").hover(function(){
+			$("#img").attr("src","back.jpg");
+		})
+		$("#d").hover(function(){
+			$("#img").attr("src","motivate.jpg");
+		})
+		$("#e").hover(function(){
+			$("#img").attr("src","yoga.jpg");
+		});
+		if($(window).width()<=1100)
+		{
+			$("#cont").addClass("container text-center");
+			$("#button").addClass("text-center").css("margin","0px");
+		}
+		
+		
+	});
+</script>
+</body>
+</html>

@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>BrainWave</title>
+  <link rel="short icon" type=image href="logo4.png">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+  <style>
+  		.list-group-item{
+  			padding: 0px;
+  		}
+  		h3 a{
+  			text-decoration: none;
+  		}
+  		h3 a:hover{text-decoration: none;}
+
+.affix{
+      top:0px;
+      width:100%;
+      z-index: 9999;
+    }
+.navbar-inverse .collapse .nav li  a{
+        font-size: 20px;
+        color:white;
+        font-family: sans-serif;
+      }
+ .navbar-inverse .collapse .nav li  a:hover{
+        text-decoration: none;
+        font-size: 23px;
+        
+      }
+      .popover {
+    background: #4c91cd;
+    box-shadow: none;
+    width: 250px;
+      }
+    .popover.bottom .arrow:after {
+        border-bottom-color: #4c91cd;
+    }
+.right{ float: right; }
+.left{float: left;}
+   .navbar-inverse{
+    background: #337ab7;}
+   body{overflow-x: hidden;}
+  </style>
+</head>
+<body>
+  
+  <div id=all-material>
+  <div class=row>
+  <div class="col-md-3 col-xs-12">
+    <center><a href=brain-latest.html><img src="wave.png" height="63px" width="auto" style="margin-top: 10px;"></a></center>
+  </div>
+  <div class="col-md-9" id=top_text>
+    <p class="text-uppercase navbar-text" style="float: right;font-family:sans-serif;word-spacing: 5px;letter-spacing: 2px;font-size: 17px; padding-left:10px;"><br>A wave to make india mentally strong and relaxed</p>
+  </div>
+  </div>
+  <nav class=" navbar-inverse " data-spy=affix data-offset-top=90>
+    <div class=navbar-header>
+  <a type="button" class="navbar-toggle btn btn-default" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav">
+        <li><a href=powermind.html>Power Mind</a></li>
+        <li><a href=# data-trigger=focus data-toggle=popover data-placement=bottom data-content="<li><a href=chess.html>Chess </a> </li> <li><a href=ch.html>Burst the bubbles</a></li><li><a href=memory.html >Remember the Alphabet</a></li>">Games<span class=caret></span></a></li>
+        <li><a href=music.html>Music</a></li>
+        <li><a href=# data-trigger=focus data-toggle=popover data-placement=bottom data-content="<li><a href=quotesMotivation.html>Motivational Quotes </a> </li> <li><a href=motvid.html>Motivational Videos</a></li><li><a href=testmotlev.html >Motivation Level Test</a></li>">Motivation<span class="caret"></span></a></li>
+        <li><a href=yoga.html>Yoga</a></li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <form class="navbar-form">
+        <div class=input-group>
+        <input type="text" id=search name="search" placeholder="search" class="form-control">
+        <div class="input-group-btn">
+          <button class="btn btn-default"><span class="glyphicon glyphicon-search"></span></button>
+        </div>
+        </div>
+        </form>
+      </ul>
+  </nav>
+  
+	<div class="carousel slide " id=mycar data-ride=carousel >
+		<ol class="carousel-indicators">
+			<li data-target="#mycar" data-toggle=tooltip title="<img src=yog1.png style='height:60px;width:180px;'>" data-slide-to=0 class="active"></li>
+			<li data-target="#mycar" data-toggle=tooltip title="<img src=yog2.jpg style='height:60px;width:180px;'>"data-slide-to=1></li></li>
+			<li data-target="#mycar" data-toggle=tooltip title="<img src=yog3.jpg style='height:60px;width:180px;'>"data-slide-to=2></li></li>
+			<li data-target="#mycar" data-toggle=tooltip title="<img src=yog4.png style='height:60px;width:180px;'>"data-slide-to=3></li></li>
+			<li data-target="#mycar" data-toggle=tooltip title="<img src=yog5.jpg style='height:60px;width:180px;'>"data-slide-to=4></li></li>
+			<li data-target="#mycar" data-toggle=tooltip title="<img src=yog6.jpg style='height:60px;width:180px;'>"data-slide-to=5></li></li>
+		</ol>
+		<center>
+		<div class="carousel-inner">
+			<div class="item active">
+				<img src="yog1.png">
+			</div>
+			<div class="item">
+				<img src="yog2.jpg">
+			</div>
+			<div class="item">
+				<img src="yog3.jpg">
+			</div>
+			<div class="item">
+				<img src="yog4.png">
+			</div>
+			<div class="item">
+				<img src="yog5.jpg">
+			</div>
+			<div class="item">
+				<img src="yog6.jpg">
+			</div>
+		</div>
+		</center>
+		<a href="#mycar" data-slide=prev class="left carousel-control">
+			<i class="glyphicon glyphicon-chevron-left"></i>
+		</a>
+		<a href="#mycar" data-slide=next class="right carousel-control">
+			<i class="glyphicon glyphicon-chevron-right"></i>
+		</a>
+	</div>
+	<br>
+<div class=container>
+<blockquote class="text-primary bg-info"style="border-left: 5px solid dodgerblue;"><h3 class=text-muted>According to Bhagwat Gita,</h3>
+<p><i>"Samatvam yoga uchhayate"</i>-yoga is balance and harmony of the mind and body.</p></blockquote>
+<h3 class="text-primary">The elements of yoga have been described as Ashtanga Yoga. The ashtanga yoga has been derived from two words ie <i>Ashta </i>means 8 and <i>anga</i> means limbs. Hence, Ashtanga yoga is also known as eight-limbed yoga.  </h3>
+        
+<div class="panel-group">
+    <div class="panel panel-primary">
+      <div class="panel-heading">
+          <h4 class="panel-title"><a data-toggle="collapse" href="#8limbs" style="text-decoration: none;">Aashtang Yoga </a></h4>
+        
+      </div>
+      <div id="8limbs" class="panel-collapse collapse">
+        <ul class="list-group">
+          <li class="list-group-item">
+          	<div class="panel panel-info">
+          	<div class=panel-heading><h4 class="panel-title"><a href=#yama data-toggle=collapse>Yama</a></h4></div>
+          	<div class="panel-collapse collapse" id=yama>
+					<div class="panel-group" id="accordion">
+				    <div class="panel panel-default">
+				      <div class="panel-heading">
+				        <h4 class="panel-title">
+				          <a data-toggle="collapse" data-parent="#accordion" href="#ahimsa">Ahimsa (Non-Violence)</a>
+				        </h4>
+				      </div>
+				      <div id="ahimsa" class="panel-collapse collapse">
+				        <div class="panel-body">
+				        	It focuses on non-killing. Even this guides not to pain others. It has been noticed that non-violence arises from fear and weakness. This guides a person to curb anger and leads non-violence life.
+				        </div>
+				      </div>
+				    </div>
+				  
+				      <div class="panel panel-default">
+				      <div class="panel-heading">
+				        <h4 class="panel-title">
+				          <a data-toggle="collapse" data-parent="#accordion" href="#satya">Satya (Truth)</a>
+				        </h4>
+				      </div>
+				      <div id="satya" class="panel-collapse collapse">
+				        <div class="panel-body">It is stated that if a person follows the truth, he gets fruitful results.So, it gives stress on truthfulness</div>
+				      </div>
+				    </div>
+				    <div class="panel panel-default">
+				      <div class="panel-heading">
+				        <h4 class="panel-title">
+				          <a data-toggle="collapse" data-parent="#accordion" href="#asteya">Asteya(non-stealing)</a>
+				        </h4>
+				      </div>
+				      <div id=asteya class="panel-collapse collapse">
+				        <div class="panel-body">A person is told not to lift anything of the person without asking him. So this guides to reduced physical needs.</div>
+				      </div>
+				    </div>
+				  
+				   <div class="panel panel-default">
+				      <div class="panel-heading">
+				        <h4 class="panel-title">
+				          <a data-toggle="collapse" data-parent="#accordion" href="#brahmacharya">Brahmacharya</a>
+				        </h4>
+				      </div>
+				      <div id="brahmacharya" class="panel-collapse collapse">
+				        <div class="panel-body">This leads to celibacy. A yogi is instructed to follow a bachelor's life preserve energy.</div>
+				      </div>
+				    </div>
+				     <div class="panel panel-default">
+				      <div class="panel-heading">
+				        <h4 class="panel-title">
+				          <a data-toggle="collapse" data-parent="#accordion" href="#aparigah">Aparigah</a>
+				        </h4>
+				      </div>
+				      <div id="aparigah" class="panel-collapse collapse">
+				        <div class="panel-body">It means to lead a life with minimum requirement, even charity is also not accepted.</div>
+				      </div>
+				    </div>
+
+          	</div>
+         	</div>
+      	  </li>
+          <li class="list-group-item"><div class="panel panel-info">
+          	<div class=panel-heading><h4 class="panel-title"><a href=#niyama data-toggle=collapse>Niyama</a></h4></div>
+          	<div class="panel-collapse collapse" id=niyama>
+					<div class="panel-group" id="accordio">
+				    <div class="panel panel-default">
+				      <div class="panel-heading">
+				        <h4 class="panel-title">
+				          <a data-toggle="collapse" data-parent="#accordio" href="#shaucha">Shaucha (Purity)</a>
+				        </h4>
+				      </div>
+				      <div id="shaucha" class="panel-collapse collapse">
+				        <div class="panel-body">
+				        	Purity is very essential for well-being. So, after practising of asanas lot of toxins and dirt come out of body which must be cleaned by taking bath. This aims to remove all impurities from the body.
+				        </div>
+				      </div>
+				    </div>
+				  
+				      <div class="panel panel-default">
+				      <div class="panel-heading">
+				        <h4 class="panel-title">
+				          <a data-toggle="collapse" data-parent="#accordio" href="#santosh">Santosh (Contentment)</a>
+				        </h4>
+				      </div>
+				      <div id="santosh" class="panel-collapse collapse">
+				        <div class="panel-body">Contentment must be induced otherwise it is difficult to concentrate on kind of work. It is also advised to do yoga in clean air and noise-free area. For this purpose, banks of rivers are preferred.</div>
+				      </div>
+				    </div>
+				    <div class="panel panel-default">
+				      <div class="panel-heading">
+				        <h4 class="panel-title">
+				          <a data-toggle="collapse" data-parent="#accordio" href="#tapa">Tapa (Detachment)</a>
+				        </h4>
+				      </div>
+				      <div id=tapa class="panel-collapse collapse">
+				        <div class="panel-body">It has been derived from a word 'tap' which means to burn. A person with the help of 'tap' can gain strength, endurance, courage and simplicity.</div>
+				      </div>
+				    </div>
+				  
+				   <div class="panel panel-default">
+				      <div class="panel-heading">
+				        <h4 class="panel-title">
+				          <a data-toggle="collapse" data-parent="#accordio" href="#swadhyaya">Swadhyaya (Study spiritual books)</a>
+				        </h4>
+				      </div>
+				      <div id="swadhyaya" class="panel-collapse collapse">
+				        <div class="panel-body">To gain knowledge and spend time with good people.</div>
+				      </div>
+				    </div>
+				     <div class="panel panel-default">
+				      <div class="panel-heading">
+				        <h4 class="panel-title">
+				          <a data-toggle="collapse" data-parent="#accordio" href="#pranidhan">Ishwar Pranidhan (Dedication to lord)</a>
+				        </h4>
+				      </div>
+				      <div id="pranidhan" class="panel-collapse collapse">
+				        <div class="panel-body">Complete surrender of self to God in words, deeds, and thoughts.</div>
+				      </div>
+				    </div>
+
+          	</div>
+         	</div></li>
+          <li class="list-group-item">
+          		<div class="panel panel-info"><div class="panel-heading"><h4 class="panel-title"><a href=#asana data-toggle=collapse >Asanas</a></h4></div>
+          		<div id=asana class="collapse panel-collapse">
+          		<div class=panel-body>Asanas are various postures of yoga. These poses help the person to remain
+				healthy and balanced. These help to develop concentration. By practising asana one
+				can develop agility, balance, endurance and great vitality. They keep the body free
+				from disease. Their real importance lies in the way they train and discipline the mind
+				There are various types of asanas such as corrective asanas, relaxative asanas and
+				meditative asanas.</div>
+			</div>
+          	</div>
+          </li>
+          <li class="list-group-item">
+          		<div class="panel panel-info"><div class="panel-heading"><h4 class="panel-title"><a href=#pranayam data-toggle=collapse >Pranayam</a></h4></div>
+          		<div id=pranayam class="collapse panel-collapse">
+          		<div class=panel-body>The word Pranayama comes from Sanskrit. It has two parts i.e. Prana
+				means Vital force and Ayama means the control of the Prana. Through pranayama
+				vital forces can be controlled by concentration and breathing. It leads to the control and
+				regulation of breath. The Pranayama has three phases :<br>
+				1) Puraka: It is inhalation of air into the lungs.<br>
+				2) Rechaka: It is exhalation of air from lungs.<br>
+				3) Kumbhaka: In a particular posture, the holding of breath is done. During this, no
+				exhalation and inhalation is done.
+				It is considered that through Pranayama each part of the body can be filled with Prana
+				(breath). This can prevent many diseases. It keeps the mind and body alive.
+				</div>
+				</div>
+          		</div>
+          	</li>
+          <li class="list-group-item">
+         	<div class="panel panel-info"><div class="panel-heading"><h4 class="panel-title"><a href=#pratyahara data-toggle=collapse >Pratyahara</a></h4></div>
+          		<div id=pratyahara class="collapse panel-collapse">
+          		<div class=panel-body>
+          			Detaching the mind and sense organs from the related activity and
+					attaching to God is known as pratyahara. In pratyahara, the senses no longer respond
+					to the external objects that hinder mental concentration. The attachment of various
+					senses such as words, beauty, taste, smell etc. diverts the individual from the way of
+					self-welfare. The practitioner starts feeling extreme pleasure in remembering and
+					connecting to God.
+				</div>
+				</div>
+          		</div>
+          </li>
+          <li class="list-group-item">
+          	<div class="panel panel-info"><div class="panel-heading"><h4 class="panel-title"><a href=#dharna data-toggle=collapse >Dharna</a></h4></div>
+          		<div id=dharna class="collapse panel-collapse">
+          		<div class=panel-body>
+          			Dharna is the concentration of mind. In dharna one is able to control self or
+					mind completely. He is concentrated wholly on a single point or on a task in which he
+					is completely engrossed. Dharna is the first step towards samadhi. In fact dharna is a
+					mental exercise which enables a yogi to go ahead towards dhyana and samadhi.
+				</div>
+				</div>
+          		</div></li>
+          <li class="list-group-item">
+          	<div class="panel panel-info"><div class="panel-heading"><h4 class="panel-title"><a href=#dhyana data-toggle=collapse >Dhyana</a></h4></div>
+          		<div id=dhyana class="collapse panel-collapse">
+          		<div class=panel-body>
+          			Dhyan or meditation is the seventh element of yoga. Dhayana is the
+					process of complete concentration of mind and one can concentrate long and do
+					meditation. It is the stage prior to samadhi. In this condition one is able to integrate
+					body, control over breath, senses, mind, ego etc. In fact, dhyana is a complete
+					concentration of mind over a period of time without any divergence.
+				</div>
+				</div>
+          		</div>
+          </li>
+          <li class="list-group-item">
+          	<div class="panel panel-info"><div class="panel-heading"><h4 class="panel-title"><a href=#samadhi data-toggle=collapse >Samadhi</a></h4></div>
+          		<div id=samadhi class="collapse panel-collapse">
+          		<div class=panel-body>
+          			Samadhi is the stage in which one loses personal identity. It is the peak of
+					meditation. It is the union of individual's soul with the supreme soul. Person remains
+					in the state of Samadhi and his senses are at rest as one is sleeping but his mind
+					remains alert. In this state one is fully conscious and alert.
+				</div>
+				</div>
+          		</div>
+
+          </li>
+        </ul>
+        <div class="panel-footer">All these elements help to improve the individual's physical health, mental, emotional,
+moral qualities, social qualities and spiritual balance. The personality of the individual is
+developed and one is able to live long and enjoy life.</div>
+      </div>
+    </div>
+  </div>
+</div>
+<br>
+	<div class="col-sm-4 ">
+		<center>
+			<div>
+	<div style=" border-left: 130px solid transparent;border-right: 130px solid transparent;border-top: none;border-bottom: 75px solid chartreuse;width: 0px;"></div>
+	<h3 style="display: none;" id=asat class="text-center">
+		<!--<a href=# target=_blank>Bhujang Asana</a><br>-->
+		<a href="asana.html#section0" >Surya Namaskara</a><br>
+		<a href="asana.html#section1" >Shalabh Asana</a><br>
+		<a href="asana.html#section2" >Dhanur Asana</a><br>
+		<!--<a href=# target=_blank>Mayur Asana</a><br>-->
+		
+		<a href="asana.html#section4" >Sarvang Asana</a><br>
+		<a href="asana.html#section5" >Ard Matsyendrasana</a><br>
+		<a href="asana.html#section6" >Gomukhasana</a><br>
+		<a href="asana.html#section7" >Chakra Asana</a><br>
+		<!--<a href=# target=_blank>Pashchimotan Asana</a><br>-->
+	</h3>
+	<div style="height: 150px;width: 300px;background: chartreuse" id=asa><p class="text-center" style="font-weight: thick;font-size: 30px"><br>Asana</p></div>
+	<div style=" border-left: 130px solid transparent;border-right: 130px solid transparent;border-bottom: none;border-top: 75px solid chartreuse;width: 0px;"></div>
+</div>
+	</center>
+	</div>
+
+	<div class="col-sm-4" >
+		<center>
+			<div>
+	<div style=" border-left: 130px solid transparent;border-right: 130px solid transparent;border-top: none;border-bottom: 75px solid chartreuse;width: 0px;"></div>
+	<h3 style="display: none;" id=pranat class="text-center">
+		<a href="pranayam.html#section0" >Anulom-Vilom</a><br>
+		<a href="pranayam.html#section1" >Kapal-bhati</a><br>
+		<!--<a href=# target=_blank>Bhramairi</a><br>-->
+		<a href="pranayam.html#section2" >Sitali Pranayama</a><br>
+		<a href="pranayam.html#section4" >Ujjai Pranayama</a><br>
+		
+		<a href="pranayam.html#section5" >Bhastrika Pranayama</a><br>
+		<a href="pranayam.html#section6" >Aganisara Pranayama</a><br>
+		<a href="pranayam.html#section7" >Brahmiri Pranayama</a><br>
+		<!--<a href=# target=_blank>Surya Bhedana Pranayama</a><br>-->
+	</h3>
+
+	<div style="height: 150px;width: 300px;background: chartreuse" id=prana><p class="text-center" style="font-weight: thick;font-size: 30px"><br>Pranayam</p></div>
+	<div style=" border-left: 130px solid transparent;border-right: 130px solid transparent;border-bottom: none;border-top: 75px solid chartreuse;width: 0px;"></div>
+	</center>
+</div>
+	</div>
+
+	<!--<div class="col-sm-3 ">
+		<center>
+			<div >
+	<div style=" border-left: 130px solid transparent;border-right: 130px solid transparent;border-top: none;border-bottom: 75px solid chartreuse;width: 0px;"></div>
+	<h3 style="display: none;" id=kriyat class="text-center">
+		<a href="kriyas.html#section1" target=_blank>Jala-Basti</a><br>
+		<a href="kriyas.html#section2" target=_blank>Sthula-Basti</a><br>
+		<a href="kriyas.html#section3" target=_blank>Vaman-Dhauti</a><br>
+		<a href="kriyas.html#section4" target=_blank>Jal-Neti</a><br>
+		<a href="kriyas.html#section5" target=_blank>Sutra-Neti</a><br>
+		<a href="kriyas.html#section6" target=_blank>Trataka</a><br>
+		<a href="kriyas.html#section7" target=_blank>Nauli-kriya</a><br>
+	
+	</h3>
+	<div style="height: 150px;width: 300px;background: chartreuse" id=kriya><p class="text-center" style="font-weight: thick;font-size: 30px"><br>Yogic Kriyas</p></div>
+	<div style=" border-left: 130px solid transparent;border-right: 130px solid transparent;border-bottom: none;border-top: 75px solid chartreuse;width: 0px;"></div>
+</div>
+	</center>
+	</div>-->
+
+	<div class="col-sm-4">
+		<center>
+			<div >
+	<div style=" border-left: 130px solid transparent;border-right: 130px solid transparent;border-top: none;border-bottom: 75px solid chartreuse;width: 0px;"></div>
+		<h3 style="display: none;" id=nindrat class="text-center">
+		<!--<a href="concentration.html#section1" target=_blank>Sukhasana</a><br>-->
+		<a href="asanasforconcentration.html#section1" >Tadasana</a><br>
+		<a href="asanasforconcentration.html#section2" >Padamasana</a><br>
+		<a href="asanasforconcentration.html#section3" >Shashankasana</a><br>
+		<a href="asanasforconcentration.html#section4" >VrikshaAsana</a><br>
+		<a href="asanasforconcentration.html#section5" >GarudAsana</a><br>
+		<a href="asanasforconcentration.html#section6" >Bakasana</a><br>
+		<a href="asanasforconcentration.html#section7" >Ushtrasana</a><br>
+
+	</h3>
+	<div style="height: 150px;width: 300px;background: chartreuse" id=nindra><p class="text-center" style="font-weight: thick;font-size: 30px"><br>Yoga for<br>concentration</p></div>
+	<div style=" border-left: 130px solid transparent;border-right: 130px solid transparent;border-bottom: none;border-top: 75px solid chartreuse;width: 0px;margin-bottom: 20px;"></div>
+	</div>
+	</center>
+	</div>
+	<script>
+    
+      $(window).resize(function(){
+
+        if($(window).width()<=768)
+      {
+        $('#top_text').hide();
+      }
+      else 
+      {
+        $('#top_text').show();
+      }
+
+      });
+     
+      $('[data-toggle=popover]').popover({
+        html:true
+      });
+  </script>
+
+	<script>
+		$("#asa").click(function(){
+			$(this).animate({ marginTop:"20px"},"slow");
+			$("#asat").slideToggle();
+		});
+				$("#prana").click(function(){
+			$(this).animate({ marginTop:"20px"},"slow");
+			$("#pranat").slideToggle();
+		});
+		$("#kriya").click(function(){
+			$(this).animate({ marginTop:"20px"},"slow");
+			$("#kriyat").slideToggle();
+		});
+		$("#nindra").click(function(){
+			$(this).animate({ marginTop:"20px"},"slow");
+			$("#nindrat").slideToggle();
+		});
+
+	</script>
+<script>
+	$("[data-toggle=tooltip]").tooltip({
+		html:true
+	});
+</script>
+</body>
+</html>

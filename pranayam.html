@@ -1,0 +1,326 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>BrainWave > Pranayama</title>
+  <link rel="short icon" type=image href="logo4.png">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+  <style>
+  body {
+    position: relative; 
+  }
+
+  #add2.affix{top:70px;}
+  nav.affix {
+    top:0;
+    width: 100%;
+    z-index: 9999 !important;
+  }
+  .navbar {
+    margin-bottom: 0px;
+  }
+
+  nav.affix ~ .container-fluid {
+   position: relative;
+   top: 50px;
+  }
+  
+  p,li{font-size: 20px;}
+  .navbar li{
+    font-weight: 700;
+    font-size: 15px;
+    padding: 0px;
+  }
+      *{font-family: serif;}
+  body{overflow-x:hidden;}
+    
+.navbar-inverse .collapse .nav li  a{
+        font-size: 20px;
+        color:white;
+        font-family: serif;
+      }
+ .navbar-inverse .collapse .nav li  a:hover{
+        text-decoration: none;
+        font-size: 23px;
+        
+      }
+      .popover {
+    background: #4c91cd;
+    box-shadow: none;
+    width: 250px;
+      }
+    .popover.bottom .arrow:after {
+        border-bottom-color: #4c91cd;
+    }
+.right{ float: right; }
+.left{float: left;}
+   .navbar-inverse{
+    background: #337ab7;}
+  </style>
+</head>
+<body data-spy="scroll" data-target="#sidenav" data-offset="50">
+
+<div class=row>
+  <div class="col-md-3 col-xs-12">
+    <center><a href=brain-latest.html><img src="wave.png" height="63px" width="auto" style="margin-top: 10px;"></a></center>
+  </div>
+  <div class="col-md-9" id=top_text>
+    <p class="text-uppercase navbar-text" style="float: right;font-family:sans-serif;word-spacing: 5px;letter-spacing: 2px;font-size: 17px; padding-left:10px;"><br>A wave to make india mentally strong and relaxed</p>
+  </div>
+  </div>
+  <nav class=" navbar-inverse " data-spy=affix data-offset-top=90>
+    <div class=navbar-header>
+  <a type="button" class="navbar-toggle btn btn-default" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav">
+        <li><a href=powermind.html>Power Mind</a></li>
+        <li><a href=# data-trigger=focus data-toggle=popover data-placement=bottom data-content="<li><a href=chess.html>Chess </a> </li> <li><a href=ch.html>Burst the bubbles</a></li><li><a href=memory.html >Remember the Alphabet</a></li>">Games<span class=caret></span></a></li>
+        <li><a href=music.html>Music</a></li>
+        <li><a href=# data-trigger=focus data-toggle=popover data-placement=bottom data-content="<li><a href=quotesMotivation.html>Motivational Quotes </a> </li> <li><a href=motvid.html>Motivational Videos</a></li><li><a href=testmotlev.html >Motivation Level Test</a></li>">Motivation<span class="caret"></span></a></li>
+        <li><a href=yoga.html>Yoga</a></li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <form class="navbar-form">
+        <div class=input-group>
+        <input type="text" id=search name="search" placeholder="Search..." class="form-control">
+        <div class="input-group-btn">
+          <button class="btn btn-default"><span class="glyphicon glyphicon-search"></span></button>
+        </div>
+        </div>
+        </form>
+      </ul>
+  </nav>
+    <script>
+    
+      $(window).resize(function(){
+
+        if($(window).width()<=800)
+      {
+        $('#top_text').hide();
+      }
+      else 
+      {
+        $('#top_text').show();
+      }
+
+      });
+     
+      $('[data-toggle=popover]').popover({
+        html:true
+      });
+  </script>
+
+
+<div class="col-md-2" id=sidenav >
+  <ul class="nav nav-pills nav-stacked" data-spy=affix data-offset-top=90>
+    <br>
+            <li><a href="#section0">Anulom-Vilom</a></li>
+            <li><a href="#section1">Kapal-bhati</a></li>
+            <li><a href="#section2">Sitali Pranayama</a></li>
+            <li><a href="#section4">Ujjai Pranayama</a></li>
+            
+            <li><a href="#section5">Bhastrika Pranayama</a></li>
+            <li><a href="#section6">Aganisar Pranayama</a></li>
+           <li><a href="#section7">Brahmiri Pranayama</a></li>
+  </ul>
+</div>
+
+<div class="col-md-8">
+  <ul class="pager">
+  <li class="previous left"><a href="asana.html">Previous</a><br>Various Asanas</li>
+  <li class="next right"><a href="asanasforconcentration.html">Next</a><br><br>Asanas that increase<br>concentration</li>
+</ul>
+  <div id="section0" class=" grp container-fluid">
+  <img src=anulom.gif width="100%">
+  <div class="text-center bg-primary" style="font-size: 30px;">Anulom-Vilom</div>
+  <h3>Benifits:</h3>
+  <ul>
+    <li>Anulom Vilom Pranayama cleans the pranic channels and makes the prana flow freely in the entire body. The nadis or the pranic energy channels are purified. Hence this pranayama is also called Nadi Shodhana Pranayama.</li>
+    <li>Anulom Vilom Pranyama balances the two main energy channels – Ida and Pingala. It balances the two hemispheres of the brain, bringing about peace and tranquility.When the Ida and Pingala nadis are balanced, it awakens the central channel called Sushumna Nadi.</li>
+    <li>It removes toxins from the body.</li>
+    <li>It can reduce weight in some practitioners depending on their body constitution and is a good practice for obesity.</li>
+  </ul>
+  <h3>Caution:</h3>
+  <ul>
+    <li>Those suffering from heart ailments should not attempt retention of breath.</li>
+    <li>Avoid retension of breath if you have high blood pressure.</li>
+  </ul>
+  </div>
+<div id="section1" class=" grp container-fluid">
+  <img src=kapalbhati.gif width="100%">
+  <div class="text-center bg-primary" style="font-size: 30px;">Kapal Bhati</div>
+  <h3>Benifits:</h3>
+ <ul>
+   <li>It increases the flow of oxygen in the body and mainly the lungs.</li>
+<li>Kapalabhati Pranayama along with Asthma Mudra and Bronchial Mudra practice, has better benefits and helps to heal asthma and bronchitis related symptoms.</li>
+<li>Reduce the stress and anxiety in the body and the mind, bringing more clarity.</li>
+<li>Helps to detoxify the entire body of all impurities in a cleansing process, through the fast exhalations.</li>
+<li>When practiced along with the basic yoga poses on a daily basis, it keeps the body light and healthy, encouraging good eating habits and other habits.</li>
+<li>Improves digestion while cleansing the internal organs.</li>
+<li>With the practice of Kapalabhati the lungs are cleansed of carbon dioxide- the toxic end product of metabolism.</li>
+<li>This pranayama is good for those suffering from diabetes as it cleanses the body and encourages a good endocrine system. Yoga for diabetes</li>
+ </ul>
+
+<h3>Caution:</h3>
+<ul>
+   <li>This practice of Kapalabhati pranayama should be avoided by anyone suffering from viral infections.</li>
+<li>Not to be practiced by women who are either pregnant or are in their menstrual cycle.</li>
+<li>Hypertension patients should practice Kapalabhati Pranayama with a yoga teacher’s guidance and care.</li>
+<li>Not to be practiced by anyone suffering from injury of the neck, as there is pressure with the fast exhalation.</li>
+<li>Not to be done or practiced by anyone suffering from lower back pain or even slip disc.</li>
+<li>Not to be practiced by anyone with a weak digestive system</li>
+</ul>
+</div>
+<div id="section2" class="grp container-fluid">
+  <img src=sitali.gif width="100%">
+  <div class="text-center bg-primary" style="font-size: 30px;">Sitali Pranayama</div>
+  <h3>Benifits:</h3>
+  <ul>
+    <li>Sitali Pranayama cools the body and is best done after the practice of daily yoga poses, bringing balance in the temperature of the body.</li>
+<li>Sitali Pranayama helps to reduce the blood pressure in the body when done with guidance from a yoga teacher. </li>
+<li>As this breathing cools the body temperature, it controls the parasympathetic and somatic nervous system and hence beneficial for those suffering from anxiety related issues, including trauma. </li>
+<li>Helps in heart related diseases and can be practiced along with heart opening series of yoga poses for better results.</li>
+<li>As it plays a great role in the endocrine system, it keeps the internal organs like stomach, liver, spleen etc, clean from toxins.</li>
+  </ul>
+  <h3>Caution:</h3>
+  <ul>
+    <li>Best to avoid if suffering from blood pressure.</li>
+    <li>Not to be done if suffering from migraine.</li>
+    <li>Best not to hold the breath within if having problems related to the heart.</li>
+  </ul>
+</div>
+<div id="section4" class="grp container-fluid">
+  <img src=ujjai.gif width="100%">
+  <div class="text-center bg-primary" style="font-size: 30px;">Ujjayi Pranayama</div>
+  <h3>Benifits:</h3>
+  <ul>
+    <li>This kind of breathing helps to reduce infections or allergies in the lungs, improving the lung capacity with full deep breathing.
+Clearing the passage of the nostrils and the throat, it reduces the accumulation of phlegm.</li>
+<li>Increases the supply of oxygen throughout the entire body, keeping the body active and fresh.</li>
+<li>Ujjayi Pranayama is good for Blood Pressure. </li>
+<li>The practice of Ujjayi Pranayama brings balance in all the chakras in the body, while activating them. Yoga for the Chakras
+Strengthens the digestive system.</li>
+<li>As Ujjayi Pranayama cools the body working on the Ida(left nostril) side of the body, the practice brings more benefit if done along with the practice of Moon Salutation (Chandra Namaskar).</li>
+</li>
+  </ul>
+  <h3>Caution:</h3>
+  <ul>
+    <li>Not to be practiced when suffering from migraine.</li>
+<li>Not to be practiced when suffering from heart ailments.</li>
+<li>Best to avoid if pregnant as if done wrong can put pressure on the fetus.</li>
+  </ul>
+
+</div>
+<div id="section5" class="grp container-fluid">
+  <img src="bhastrika.gif" width="100%">
+<div class="text-center bg-primary" style="font-size: 30px;">Bhastrika Pranayama</div>
+  <h3>Benifits:</h3>
+  <ul>
+    <li>Strengthens the respiratory system, while keeping the passage clear of toxins and blockages.</li>
+<li>Bhastrika Pranayama helps to improve the blood circulation in the body, helps to purify the blood, by detoxifying.</li>
+<li>Keeps the nasal passage clean and clear of dust and allergies.</li>
+<li>Bhastrika Pranayama helps to reduce fat, as it is a dynamic way of breathing.</li>
+<li>This dynamic way of breathing helps to boost immunity.</li>
+<li>Bhastrika Pranayama calms the body along with the mind, reducing the stress and anxiety completely.</li>
+<li>Helps to improve awareness with deep focus.</li>
+<li>Reducing the gastric fire, helping digestion. </li>
+  </ul>
+  <h3>Caution:</h3>
+  <ul>
+    <li>Not to be practiced by those suffering from any ailment related to the internal organ- stomach, spleen, intestine, kidney etc.</li>
+<li>Not to be practiced by someone suffering from any heart ailment.</li>
+<li>Bhastrika Pranayama is not good for those with Hypertension.</li>
+<li>Asthmatic patients should take guidance from a yoga teacher while practicing Bhastrika Pranayama.</li>
+<li>Avoid if there are ulcers in the body.</li>
+  </ul>
+</div>
+<div id="section6" class="grp container-fluid">
+  <img src="aganisara.gif" width="100%">
+<div class="text-center bg-primary" style="font-size: 30px;">Aganisar Pranayama</div>
+<h3>Benefits</h3>
+<ul>
+  <li>Agnisar Kriya is one of the best asanas to strengthen the abdominal muscles. It focuses on churning out the practitioner’s belly which can improve the abdominal muscles and get rid of digestive disorders. It is excellent pranayama for the abdomen.</li>
+<li>Agnisar Kriya can help in curing lung disorders since it involves strong forceful rhythms of inhalation and exhalation. Such strong breathing technique empties lungs of phlegm and coughs thus ensuring smooth breathing.</li>
+<li>The kriya helps to regulate fire element of the body which in turn helps to keep the energy levels high all day. It also maintains the warmth of the body and removes sleepiness.</li>
+<li>The kriya plays a very important role when it comes to rejuvenating the organs which can also hinder the aging process. It can also help to retain youth for a long time.</li>
+<li>Agnisar kriya helps to increase the blood flow within the body.</li>
+<li>Agnisar basically serves an inner activity in which the digestive and abdominal muscles get churned out. This process helps to massage the internal organs, especially the belly.</li>
+<li>This practice can stimulate the pancreas and liver thus curing obesity problems and diabetes.</li>
+<li>It can also cure problems like tuberculosis and asthma.</li>
+</ul>
+<h3>Caution</h3>
+<ul>
+<li>Patients of a hernia, diarrhea, intestinal problems, and high blood pressure should never practice the Agnisar Kriya.</li>
+<li>If you have recently undergone stomach operation, then you must not perform this kriya. Make sure that you start practicing it after at least a few months only under the professional guidance of a yoga master.</li>
+<li>In case you experience feelings of physical distress and tiredness while practicing it, stop performing it immediately.</li>
+<li>Patients having the ear, eye and nose problems must not practice this kriya.</li>
+<li>Practicing Agnisar Kriya can help to cure diabetes naturally of your body and help in strengthening your inner organs. Practice this kriya only under the strict guidance of a professional yoga teacher.</li>
+</ul>
+</div>
+<div id="section7" class="grp container-fluid">
+ <img src="brahmiri.gif" width="100%">
+<div class="text-center bg-primary" style="font-size: 30px;">Brahmiri Pranayama</div>
+
+<h3>Benefits</h3>
+<ul>
+<li>When Bhramari Pranayama is done along with the practice of daily yoga poses, it helps to keep the energy in control, balancing it. The body needs to cool down after it is warmed up with the practice of yoga poses, and here Bhramari Pranayama ensures that.</li>
+<li>Ending the day with the practice of some yoga along with Bhramari Pranayama before going to bed, encourages a sound and deep sleep relaxing the parasympathetic nervous system, helping in reducing the symptoms related to insomnia.</li>
+<li>Bhramari Pranayama is said to release tensions and stress in the body, while playing a great role in controlling anxiety related symptoms. </li>
+<li>Helps to reduce the symptoms related to women’s reproductive system, controlling the hormones . </li>
+<li>As it calms the mind soothing the nerves, it encourages concentration and memory.</li>
+</ul>
+<h3>Caution</h3>
+<ul><li>Best to avoid if suffering from migraine, or can be done with the eyes open and with the guidance of a yoga teacher.</li>
+<li>If suffering from any heart ailment, best to practice Bhramari Pranayama for shorter duration. The sound of Hmmmm….the buzzing sound can be reduced.</li>
+<li>This practice should be done in empty stomach.</li>
+<li>The sound should be slow and in control, avoiding pressure at the lungs and the chest.</li>
+</ul>
+</div>
+
+<div id=feed class="jumbotron"><center><h3>Was the Information Useful?</h3><br>
+<button class="btn btn-success feed">Yes</button>
+<button class="btn btn-danger feed">No</button></center>
+</div>
+</div>
+ <div class="col-md-2" style="padding: 0px;">
+       <br>
+  <div  style=" background: url('bg.png') ; background-size: cover;height: 1000px;width: 100%;">
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+    <center><a href=games.html class="btn btn-info" style="font-size: 40px;">Play now! </a></center>
+  </div>
+  <br>
+  <div id=add2 style=" background:url('dressadd.png') ; background-size: cover;height: 500px;width: 225px;" data-spy=affix data-offset-top=1070>
+    <a style="float: right; padding:10px 15px 0px 0px;" id=grapes> &times;</a>
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+    <center><a href=https://www.facebook.com/dresstheoccasions target="_blank" class="btn btn-warning" style="font-size: 30px;">Browse..</a></center>
+  </div>
+
+    </div>
+
+ 
+<script>
+$(document).ready(function(){
+  $("#search").on("keyup", function() {
+    var value = $(this).val().toLowerCase();
+    $(".grp").filter(function() {
+      $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+    });
+  });
+  $(".feed").click(function(){
+    $("#feed").html("<center><h2>Thanks for Your feedback</h2></center>")
+  });
+$("#grapes").click(function(){
+$("#add2").fadeOut();
+})
+});
+</script>
+</body>
+</html>

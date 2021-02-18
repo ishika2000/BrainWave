@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Test your motivation level</title>
+	<link rel="short icon" type=image href=logo4.png>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scal=1">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+  <style>
+  	body{overflow-x: hidden;}
+  	td,th{text-align: center;}
+  	.q{text-align: left;}
+  	.hid{display: none;}
+  	.well{text-align: center;}
+  .affix{
+      top:0px;
+      width:100%;
+      z-index: 9999;
+    }
+.navbar-inverse .collapse .nav li  a{
+        font-size: 20px;
+        color:white;
+        font-family: serif;
+      }
+ .navbar-inverse .collapse .nav li  a:hover{
+        text-decoration: none;
+        font-size: 23px;
+        
+      }
+      .popover {
+    background: #4c91cd;
+    box-shadow: none;
+    width: 250px;
+      }
+    .popover.bottom .arrow:after {
+        border-bottom-color: #4c91cd;
+    }
+.right{ float: right; }
+.left{float: left;}
+   .navbar-inverse{
+    background: #337ab7;}
+   
+  </style>
+</head>
+<body>
+  
+  <div id=all-material>
+  <div class=row>
+  <div class="col-md-3 col-xs-12">
+    <center><a href=brain-latest.html><img src="wave.png" height="63px" width="auto" style="margin-top: 10px;"></a></center>
+  </div>
+  <div class="col-md-9" id=top_text>
+    <p class="text-uppercase navbar-text" style="float: right;font-family:sans-serif;word-spacing: 5px;letter-spacing: 2px;font-size: 17px; padding-left:10px;"><br>A wave to make india mentally strong and relaxed</p>
+  </div>
+  </div>
+  <nav class=" navbar-inverse " data-spy=affix data-offset-top=90>
+    <div class=navbar-header>
+  <a type="button" class="navbar-toggle btn btn-default" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav">
+        <li><a href=powermind.html>Power Mind</a></li>
+        <li><a href=# data-trigger=focus data-toggle=popover data-placement=bottom data-content="<li><a href=chess.html>Chess </a> </li> <li><a href=ch.html>Burst the bubbles</a></li><li><a href=memory.html >Remember the Alphabet</a></li>">Games<span class=caret></span></a></li>
+        <li><a href=music.html>Music</a></li>
+        <li><a href=# data-trigger=focus data-toggle=popover data-placement=bottom data-content="<li><a href=quotesMotivation.html>Motivational Quotes </a> </li> <li><a href=motvid.html>Motivational Videos</a></li><li><a href=testmotlev.html >Motivation Level Test</a></li>">Motivation<span class="caret"></span></a></li>
+        <li><a href=yoga.html>Yoga</a></li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <form class="navbar-form">
+        <div class=input-group>
+        <input type="text" id=search name="search" placeholder="Search..." class="form-control">
+        <div class="input-group-btn">
+          <button class="btn btn-default"><span class="glyphicon glyphicon-search"></span></button>
+        </div>
+        </div>
+        </form>
+      </ul>
+      <div>
+  </nav>
+  <br>
+  <script>
+    
+      $(window).resize(function(){
+        if($(window).width()<=768)
+      {
+        $('#top_text').hide();
+      }
+      else 
+      {
+        $('#top_text').show();
+      }
+      });
+     
+      $('[data-toggle=popover]').popover({
+        html:true
+      });
+  </script>
+
+	<script>
+	$(document).ready(function(){
+	  $("#search").on("keyup", function() {
+	    var value = $(this).val().toLowerCase();
+	    $("table tr").filter(function() {
+	      $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+	    });
+	  });
+	});
+	</script>
+	<div class=container-fluid>	
+		<div class=well>
+			<!--<img class=img-circle src=motivating.jpg style="float: left;">-->
+			<h2>Test Your Motivation level<br>
+				<small><kbd>Best of luck <span class="glyphicon glyphicon-thumbs-up"></span></kbd></small></h2>
+		</div>
+	<table class="table table-striped table-hover table-responsive table-bordered" >
+		<thead>
+			<th>Question</th>
+			<th>Not at all</th>
+			<th>Sometimes</th>
+			<th>Most of the times</th>
+		</thead>
+		<tr>
+			<td class=q>I'm unsure of my ability to achieve the goals I set for myself.</td>
+			<td><input type="radio"value=3 name=ch1 class="item"></td>
+			<td><input type="radio"value=2 name=ch1 class="item"></td>
+			<td><input type="radio"value=1 name=ch1 class="item"></td>
+		</tr>
+		<tr>
+			<td class="q">I regularly set goals and objectives to achieve my vision for my life.</td>
+			<td><input type="radio" value=1 name="ch2"class="item"></td>
+			<td><input type="radio" value=2 name="ch2"class="item"></td>
+			<td><input type="radio" value=3 name="ch2"class="item"></td>
+		</tr>
+		<tr>
+			<td class="q">When working on my goals, I put in maximum effort and work even harder if I've suffered a setback.</td>
+			<td><input type="radio"value=1 name=ch3 class="item"></td>
+			<td><input type="radio"value=2 name="ch3" class="item"></td>
+			<td><input type="radio"value=3 name="ch3" class="item"></td>
+		</tr>
+		<tr>
+			<td class="q">"I use rewards (and consequences) to keep myself focused. For example, if I finish my report on time, I allow myself to take a coffee break.</td>
+			<td><input type="radio" value=1 name=ch4 class="item"></td>
+			<td><input type="radio" value=2 name="ch4" class="item"></td>
+			<td><input type="radio" value=3 name="ch4" class="item"></td>
+		</tr>
+		<tr>
+			<td class="q">I believe that if I work hard and apply my abilities and talents, I will be successful</td>
+			<td><input type="radio" value=1 name="ch5" class="item"></td>
+			<td><input type="radio" value=2 name="ch5" class="item"></td>
+			<td><input type="radio" value=3 name="ch5" class="item"></td>
+		</tr>
+		<tr>
+			<td class="q">When an unexpected event threatens or jeopardizes my goal, I tend to walk away, set a different goal, and move in a new direction.</td>
+			<td><input type="radio" value=3 name="ch6" class="item"></td>
+			<td><input type="radio" value=2 name="ch6" class="item"></td>
+			<td><input type="radio" value=1 name="ch6" class="item"></td>
+		</tr>
+		<tr>
+			<td class="q">I worry about deadlines and getting things done, which causes stress and anxiety</td>
+			<td><input type="radio" value=3 name="ch7" class="item"></td>
+			<td><input type="radio" value=2 name="ch7" class="item"></td>
+			<td><input type="radio" value=1 name="ch7" class="item"></td>
+		</tr>
+		<tr>
+			<td class="q">I believe that if I work hard and apply my abilities and talents, I will be successful.</td>
+			<td><input type="radio" value=1 name="ch8" class="item"></td>
+			<td><input type="radio" value=2 name="ch8" class="item"></td>
+			<td><input type="radio" value=3 name="ch8" class="item"></td>
+		</tr>
+		<tr>
+			<td class="q">I tend to do only the minimum amount of work necessary to keep my boss and my team satisfied.</td>
+			<td><input type="radio" value=3 name="ch9" class="item"></td>
+			<td><input type="radio" value=2 name="ch9" class="item"></td>
+			<td><input type="radio" value=1 name="ch9" class="item"></td>
+		</tr>
+		<tr>
+			<td class="q">I tend to worry about why I won't reach my goals, and I often focus on why something probably won't work.</td>
+			<td><input type="radio" value=3 name="ch10" class="item"></td>
+			<td><input type="radio" value=2 name="ch10" class="item"></td>
+			<td><input type="radio" value=1 name="ch10" class="item"></td>
+		</tr>
+		<tr>
+			<td class="q">I feel that others dont care about me and have no bonding with me.</td>
+			<td><input type="radio" value=3 name="ch11" class="item"></td>
+			<td><input type="radio" value=2 name="ch11" class="item"></td>
+			<td><input type="radio" value=1 name="ch11" class="item"></td>
+		</tr>
+		<tr>
+			<td class="q">My family suports me in each phase of my life,how much do i fall</td>
+			<td><input type="radio" value=1 name="ch12" class="item"></td>
+			<td><input type="radio" value=2 name="ch12" class="item"></td>
+			<td><input type="radio" value=3 name="ch12" class="item"></td>
+		</tr>
+		<tr>
+			<td class="q">I create a vivid and powerful vision of my future success before embarking on a new goal.</td>
+			<td><input type="radio" value=1 name="ch13" class="item"></td>
+			<td><input type="radio" value=2 name="ch13" class="item"></td>
+			<td><input type="radio" value=3 name="ch13" class="item"></td>
+		</tr>
+		<tr>
+			<td class="q">I take all the things said to me to my heart and keep thinking about them again and again</td>
+			<td><input type="radio" value=3 name="ch14" class="item"></td>
+			<td><input type="radio" value=2 name="ch14" class="item"></td>
+			<td><input type="radio" value=1 name="ch14" class="item"></td>
+		</tr>
+		<tr>
+			<td class="q">I regularly set goals and objectives to achieve my vision for my life.</td>
+			<td><input type="radio" value=1 name="ch15" class="item"></td>
+			<td><input type="radio" value=2 name="ch15" class="item"></td>
+			<td><input type="radio" value=3 name="ch15" class="item"></td>
+		</tr>
+		
+		
+	</table>
+	<center><button class="btn btn-primary submit">Submit</button></center>
+	<div class=res></div>
+</div>
+<script>
+	$(document).ready(function(){
+		$(".submit").click(function(){
+			var points=0;
+			var ch=$(".item");
+			for(var i=0;i<15*3;i++)
+			{ 
+				if(ch[i].checked){points-=$(ch[i]).attr("value");}
+			}
+			points=-points;
+			$(".res").html("<h1><b>You Got "+points+" points</b><br></h1>");
+			if(points<15)
+			{
+				$(".res").addClass("alert alert-warning");
+				$(".res").append("<h2>Please Attempt All Questions to judge yourself properly</h2>");
+			}
+			else if(points>=15&&points<25)
+			{
+				$(".res").addClass("alert alert-danger");
+				$(".res").append("<h2>You allow your personal doubts and fears to keep you from succeeding. You've probably had a few incomplete goals in the past, so you may have convinced yourself that you aren't self-motivated - and then you've made that come true. Break this harmful pattern now, and start believing in yourself again. These <a class=alert-link href=# >videos</a> will help you get back your motivation.</h2>"
+				);
+			}
+			else if (points>=25&&points<35)
+			{
+				$(".res").addClass("alert alert-info");
+				$(".res").append("<h2>You're doing OK on self-motivation. You're certainly not failing - however, you could achieve much more. To achieve what you want, try to increase the motivation factors in all areas of your life. Read the relevant sections below, and work on them to strengthen your self-motivation.</h2>");
+			}
+			else if(points>35&&points<=45)
+			{
+				$(".res").addClass("alert alert-success");
+				$(".res").append("<h2>Wonderful! You get things done, and you don't let anything stand in your way. You make a conscious effort to stay self-motivated, and you spend significant time and effort on setting goals and acting to achieve those goals. You attract and inspire others with your success. Treasure this - and be aware that not everyone is as self-motivated as you are! </h2>");
+			}
+			$(".submit,.table").hide();
+			/*$("body").append("<center><a  href='#' class='btn btn-primary' id=restart> Restart Test </a></center>");
+			$("#restart").click(function(){
+				$(".submit,.table").show();
+				$(".alert,#restart").hide();
+				$(document).reload();
+			})*/
+		});
+	});
+</script>
+</body>
+</html>

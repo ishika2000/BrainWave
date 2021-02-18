@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Login</title>
+  <link rel="short icon" type=image href="logo4.png">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+  <style>
+  	#start{
+  		/*height: 100px;
+  		width: 100px;*/
+  		border-radius: 50%;
+  		margin: 20px auto;
+  		  	}
+  	.jumbotron{
+  		background: url(rose.jpg);
+  	}
+  	body{
+  		background:url(y1.jpg) no-repeat 100% 100%;
+  		margin:0px;
+  		padding: 0px;
+  	}
+  	.navbar{
+  		background: white;
+  	}
+  	#sign{
+  		display: none;
+  	}
+  	.op1{opacity: 1};
+  </style>
+</head>
+<body>
+<nav class="navbar">
+		<div class=navbar-header>
+			<div class="navbar-brand"><img src="wave.png" height="63px" width=auto style="float: left;"></div>
+		</div>
+		<p class="text-uppercase navbar-text" style="float: right;font-family:sans-serif;word-spacing: 5px;letter-spacing: 2px;font-size: 17px; padding-left:10px;"><br>A wave to make india mentally strong and relaxed</p>
+	</nav>
+	
+
+	<div class="container tohide">
+		<div class="jumbotron text-center">
+		<h2 class="text-center" style="color:white;">We provide a wide variety of activities for you..</h2>
+
+		<div class="row">
+			<div class="col-lg-2 col-lg-offset-1" id=a>
+				<div class="thumbnail">
+				 <h3>Play Mind sharpning & entertaining Games</h3>
+			</div>
+			</div>
+			<div class="col-lg-2" id=b>
+				<div class="thumbnail"><h3> Listen to Relaxing & soothing Music </h3>
+				</div>
+			</div>
+			<div class="col-lg-2 " id=c>
+				<div class="thumbnail">
+				<h3> See mirror - Know the Power of mind
+				</h3>
+			</div></div>
+			<div class="col-lg-2 " id=d>
+				<div class="thumbnail">
+				<h3>Regain your motivation when feeling low</h3>
+			</div></div>
+			<div class="col-lg-2 " id=e>
+				<div class="thumbnail">
+				<h3> Join our Meditation and Yoga classes</h3>
+			</div></div>
+		</div>
+	</div>
+</div>
+
+<img  src=collage1.png height=150px width="300px"style="float:left;"id=img class="tohide">
+
+<button class="btn btn-danger text-center active" id=start style="margin-left: 320px;" class="tohide"><h3>Get Started</h3></button>
+
+<br><br><br>
+<div class="container thumbnail" id=sign style="height: 400px;">
+	<div class=row>
+		<div class="col-sm-6">
+			<img src="wavebrain.png" style="float: left;height: 390px;width: 100%;">
+		</div>
+		<div class="col-sm-6">
+<ul class="nav nav-pills op1">
+	<li class=active><a href=#signup data-toggle=tab >Sign Up</a></li>
+	<li><a href=#signin data-toggle=tab>Sign In</a></li>
+</ul>
+<br>
+
+<div class=tab-content>
+	<div class="tab-pane fade in active" id=signup>
+		<form>
+			<div class="form-group op1">
+			<div class="input-group">
+				<i class=input-group-addon><i class="glyphicon glyphicon-user"></i></i>
+				<input type=text name=uname  class=form-control placeholder="Username...">
+			</div></div>
+			<div class="form-group op1">
+			<div class=input-group>
+				<i class=input-group-addon><i class="glyphicon glyphicon-lock"></i></i>
+				<input type=password name=uname  class=form-control placeholder="Password...">
+			</div></div>
+			<div class="form-group op1">
+			<div class=checkbox>
+				<label for=ch>
+					<input type=checkbox name=remember id=ch >
+					Remember Me
+				</label>
+			</div></div>
+			<button class="btn btn-info op1">Sign Up</button>
+		</form>
+	</div>
+	<div class="tab-pane fade" id=signin>
+		<form>
+			<div class="form-group op1">
+			<div class=input-group>
+				<i class=input-group-addon><i class="glyphicon glyphicon-user"></i></i>
+				<input type=text name=uname  class=form-control placeholder="Username">
+			</div></div>
+			<div class="form-group op1">
+			<div class=input-group>
+				<i class=input-group-addon><i class="glyphicon glyphicon-lock"></i></i>
+				<input type=password name=uname  class=form-control placeholder="password">
+			</div></div>
+			<div class="form-group op1">
+			<div class=input-group>
+				<i class=input-group-addon><i class="glyphicon glyphicon-lock"></i></i>
+				<input type=password name=uname  class=form-control placeholder=" Confirm password">
+			</div></div>
+			
+			<div class="checkbox op1">
+				<label for=check>
+					<input type=checkbox name=terms id=check >
+					You Agree with all our terms and conditions
+				</label>
+			</div>
+			
+			<button class="btn btn-info op1 disabled" id=in>Sign In</button>
+		</form>
+	</div>
+</div>
+</div>
+</div>
+<script>
+	$(document).ready(function(){
+		$("#a").hover(function(){
+			$("#img").attr("src","logo2.jpg");
+		})
+		$("#b").hover(function(){
+			$("#img").attr("src","rm3.jpg");
+		})
+		$("#c").hover(function(){
+			$("#img").attr("src","back.jpg");
+		})
+		$("#d").hover(function(){
+			$("#img").attr("src","motivate.jpg");
+		})
+		$("#e").hover(function(){
+			$("#img").attr("src","yoga.jpg");
+		});
+		$("#start").click(function(){
+			$(".tohide").hide();
+			$(this).hide();
+			$("#sign").slideDown();
+			$("#sign").css({"opacity":"0.8","background":"pink"});
+			
+		})
+		$("#check").click(function(){
+			$("#in").removeClass("disabled")
+		})
+	});
+</script>
+</body>
+</html>

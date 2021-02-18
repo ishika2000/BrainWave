@@ -1,0 +1,573 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <title>BrainWave</title>
+  <link rel="short icon" type=image href="logo4.png">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+
+  <style>
+    label,.modal .btn{
+      font-weight: 100;
+      font-size:20px;
+    }
+    .modal .nav li{
+      font-size: 24px;
+      font-weight: 900;
+     
+    }
+    *{font-family: serif;}
+  body{overflow-x:hidden;}
+    .affix{
+      top:0px;
+      width:100%;
+      z-index: 9999;
+    }
+.navbar-inverse .collapse .nav li  a{
+        font-size: 20px;
+        color:white;
+        font-family: serif;
+      }
+ .navbar-inverse .collapse .nav li  a:hover{
+        text-decoration: none;
+        font-size: 23px;
+        
+      }
+      .popover {
+    background: #4c91cd;
+    box-shadow: none;
+    width: 280px;
+    z-index: 9999;
+      }
+    .popover.bottom .arrow:after {
+        border-bottom-color: #4c91cd;
+    }
+.right{ float: right; }
+.left{float: left;}
+   .navbar-inverse{
+    background: #337ab7;}
+    #load{
+    background-color: red;
+    height: 657px;
+    max-width: 1366px;
+
+  }
+  #load{
+    background-color: red;
+    height: 657px;
+    max-width: 1366px;
+
+  }
+  .progress{
+    width: 90%;
+    margin: auto;
+
+  }
+  #all-material{display: none;}
+
+    #load,#load>div,#load>p{display:block;}
+    #load>p{
+      text-align: center;
+      color: white;
+      font-size: 50px;
+    }
+    .progress-bar{display: block;}
+   .btn-group-vertical{
+          width: 780px;
+          height: 428px;
+          margin: auto;
+          padding: 70px;
+          background-image: url("download.jpg");
+          background-size: cover;
+        }
+        
+        #s{
+          text-align: center;
+          font-weight: 900;
+          color: black;
+          font-size: 50px;
+        }
+        del{color: red;}
+        #div1,#div2,#div3,#div4,#div5{
+          background-size: contain;
+        }
+        .topics{
+          font-size: 24px;
+        }
+  </style>
+</head>
+<body ng-app="myapp" ng-controller="ctrl">
+  <div id=load>
+    <p><br><br><br><br></p>
+    <div class="progress">
+        <div class="progress-bar progress-bar-info progress-bar-striped active" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" style="width:0%">
+        </div>
+    </div>
+    <p>Loading...</p> 
+  </div>
+  <div id=all-material>
+    <!--<button data-target="#mod" data-toggle="modal">Modal</button>-->
+  <div class=row>
+  <div class="col-md-3 col-xs-12">
+    <center><a href=brain-latest.html><img src="wave.png" height="63px" width="auto" style="margin-top: 10px;"></a></center>
+  </div>
+  <div class="col-md-9" id=top_text>
+    <p class="text-uppercase navbar-text" style="float: right;font-family:sans-serif;word-spacing: 5px;letter-spacing: 2px;font-size: 17px; padding-left:10px;"><br>A wave to make india mentally strong and relaxed</p>
+  </div>
+  </div>
+  <nav class=" navbar-inverse " data-spy=affix data-offset-top=90>
+    <div class=navbar-header>
+  <a type="button" class="navbar-toggle btn btn-default" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav">
+        <li><a href=powermind.html>Power Mind</a></li>
+        <li><a href=# data-trigger=focus data-toggle=popover data-placement=bottom data-content="<li><a href=chess.html>Chess </a> </li> <li><a href=ch.html>Burst the bubbles</a></li><li><a href=memory.html >Remember the Alphabet</a></li>">Games<span class=caret></span></a></li>
+        <li><a href=music.html>Music</a></li>
+        <li><a href=# data-trigger=focus data-toggle=popover data-placement=bottom data-content="<li><a href=quotesMotivation.html>Motivational Quotes </a> </li> <li><a href=motvid.html>Motivational Videos</a></li><li><a href=testmotlev.html >Motivation Level Test</a></li>">Motivation<span class="caret"></span></a></li>
+        <li><a href=yoga.html>Yoga</a></li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <form class="navbar-form">
+        <div class=input-group>
+        <input type="text" id=search name="search" placeholder="Search..." class="form-control">
+        <div class="input-group-btn">
+          <button class="btn btn-default"><span class="glyphicon glyphicon-search"></span></button>
+        </div>
+        </div>
+        </form>
+      </ul>
+      <div>
+  </nav>
+  <div > <h1>{{abc}}</h1></div>
+    <div id=div1 style="background: url(power.png); background-size: contain; background-repeat: no-repeat;">
+    <center><br><br><br><br><br><br><br><br><br><br><br><br>
+      <a href="powermind.html"class="btn btn-primary topics">Continue With us to know your mind...</a></center>
+    </div>
+  
+    <div id="div2" class="bg-info"style="background-color:  #eee;">
+      <div class=container>
+        <div class=row>
+          <div class="col-md-8  text-center">
+            
+              <br><br>
+              <h1 style="font-size: 4em;color: #337ab7;">Wanna recreation & enjoyment<br>Wanna hone your skills.</h1>
+              <br><br><br>
+              <img src=logo2.jpg>
+              <h2 style="font-size: 3em;color: orange">With an essence of <span style="color: darkorange;">Memory Sharpening</span> games.</h2>
+            
+          </div>
+          <div class="col-md-4 col-sm-12">
+            <div >
+              <br><br><br>
+              <div style="background-color: #fff;border-radius: 5px;height: 480px;">
+                <br>
+                <center><img src="games.jpg" style="border-left: 5px solid #337ab7;height: 350px" width="95%;">
+                  <br><br>
+                   <a href="games.html"class="btn btn-primary topics">Play with us...</a>
+                </center>
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+  </div>
+
+  <div id="div3" class="bg-info"style="background-color:  #ddd;">
+      <div class=container>
+        <div class=row>
+          <div class="col-md-4 col-sm-12">
+            <div >
+              <br><br><br>
+              <div style="background-color: #fff;border-radius: 5px;height: 480px;">
+                <br>
+                <center><img src="mt.jpg" style="border-left: 5px solid #337ab7;" width="95%"height=350px >
+                  <br><br>
+                   <a href="music.html"class="btn btn-primary topics">Enjoy music...</a>
+                </center>
+
+              </div>
+            </div>
+          </div>
+          <div class="col-md-8 text-center">
+            
+              <br>
+              <h1 style="font-size: 4em;color: #337ab7;">Listen to the Old and Gold Soothing music with us and dump all your tensions and worries.</h1>
+              <br><br>
+              <img src=rm3.jpg>
+            
+          </div>
+          
+        </div>
+      </div>
+  </div>
+  <div id=div4 style="padding: 0px;" >
+    <div class=container>
+    <div class="col-md-4 ">
+      <br><br><br><br><br><br><br><br>
+      <center><img class="img-circle img-responsive" src=motive.jpg height="300" width="300" style="box-shadow:  0 8px 8px 0 #ddd;">
+      <h3>Collect your lost motivation by seeing and analysing these quotes.</h3>
+         <br>
+      <a href="quotesmotivation.html"class="btn btn-primary topics">Motivational Quotes</a></center>
+       
+    </div>
+    <div class="col-md-4 ">
+      <br><br><br><br><br><br><br><br>
+      <center><img class="img-circle img-responsive" src=motivate.jpg height="300" width="300" style="box-shadow:  0 8px 8px 0 #ddd;">
+      <h3>You can do everything and anything.Just what you need is a motivation.</h3>
+         <br>
+      <a href="motvid.html"class="btn btn-primary topics">Motivational Videos</a></center>
+      
+    </div>
+    <div class="col-md-4 ">
+      <br><br><br><br><br><br><br><br>
+      <center><img class="img-circle img-responsive" src=motive2.jpg height="300" width="300" style="box-shadow:  0 8px 8px 0 #ddd;">
+      <h3>Test your motivation level and accordingly work on it.</h3>
+         <br>
+      <a href="testmotlev.html"class="btn btn-primary topics">Test your motivation level</a></center>
+      
+    </div>
+  </div>
+    <!--<img src=dreams.jpg id=imgrp style="float: right;width:40%;">
+    <div id=grp class="btn-group-vertical btn-group-lg" style="width:60%;height: auto;" >
+      <a href=motvid.html class="btn btn-success" role=button target=_blank>Motivational Videos <span class=badge>50+</span></a>
+      <a href=quotesmotivation.html target=_blank class="btn btn-warning">Motivational Quotes</a>
+      <a href=testmotlev.html class="btn btn-danger" target=_blank>Test Your Motivation level</a>
+      <h2 id=s>DO'<del>NT QU</del>IT</h2>
+    </div>-->
+  </div>
+  <div id="div2" class="bg-info"style="background-color:  #ddd;">
+      <div class=container>
+        <div class=row>
+          <div class="col-md-8 text-center">
+            
+              <br><br>
+              <h1 style="font-size: 4em;color: #337ab7;">Meditate<br>Let the light of your heart engulf you..</h1>
+              <br><br><br>
+              <img src=yoga.jpg>
+            
+          </div>
+          <div class="col-md-4 col-sm-12">
+            <div >
+              <br><br><br>
+              <div style="background-color: #fff;border-radius: 5px;height: 480px;">
+                <br>
+                <center><img src="yoo.jpg" style="border-left: 5px solid #337ab7;" width="95%;">
+                  <br><br>
+                   <a href="yoga.html"class="btn btn-primary topics">Join us in our yoga class...</a>
+                </center>
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+  </div>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<div style="background:#555;width: 100%;color: #fff;padding: 50px 40px;" id=footer>
+	
+ <h3 class="left"><font color="white"><i  class="fa fa-facebook"></i> <i  class="fa fa-twitter"></i> <i  class="fa fa-instagram"></i> <i  class="fa fa-google"></i> </font></h3>
+	<h3 class="right"><a href=contacts.html target="_blank" style="color: white;">Contact us</a> | <a href=about.html style="color:white;">About</a></h3>
+	<br> 	
+	<center><h4 style="padding-top: 40px;">Brainwave is optimized for promoting a mentally strong and stress free India. Knowing the power of your mind helps you use your mind properly and to the fullest.Games, music and yoga has a powerful impact on the functioning of mind so they have been used to give your mind a heavy massage. Content on the page is constantly reviewed to avoid errors, but we cannot warrant full correctness of all content. While using this site, you agree to have read and accepted our terms of use, cookie and privacy policy.</h4><h3>Join our wave by <a href=#mod data-toggle=modal style="color: white;">signin up</a></h3>
+	<h3>Rate us now</h3><h1><font color=orange><i class="glyphicon glyphicon-star-empty" id=star1></i> <i class="glyphicon glyphicon-star-empty" id=star2></i> <i class="glyphicon glyphicon-star-empty" id=star3></i> <i class="glyphicon glyphicon-star-empty" id=star4></i> <i class="glyphicon glyphicon-star-empty" id=star5></i></font></h1>
+	</center>
+</div>
+  </div>
+  <div class=container-fluid style="background: #eee;">
+  <br>
+    
+<form id=fm>
+<div class="input-group">
+    <input class=form-control type=text id=comm placeholder="Post Your comment here">
+    <div class="input-group-btn"><a id=com-btn class="btn btn-default" href="#fm"><span class="glyphicon glyphicon-send"></span></a></div>
+</div></form>
+<script>
+  $(document).ready(function(){
+    $("#com-btn").click(function(){
+        var t=$("#comm").val();
+        $("#fm").after("<br><div class=media-left><img src='motivation-images/p4.jpg' style='height:60px;width:60px;'class='img-circle media-object'></div><div class=media-body><h4 class=media-heading>You<small> Posted Today</small></h4>"+ t +"</div>");
+        });
+    $("#com-btn").focus(function(){
+      $(this).keypress(function(e){
+        if(e.which==13)
+        {
+          var t=$("#comm").val();
+        $("#fm").after("<br><div class=media-left><img src='motivation-images/p4.jpg' style='height:60px;width:60px;'class='img-circle media-object'></div><div class=media-body><h4 class=media-heading>You<small> Posted Today</small></h4>"+ t +"</div>");
+        }
+      });
+    })
+    if($(window).width()<800)
+    {
+      $("#imgrp").remove();
+      $("#grp").css("width","100%");
+      $("#grp").css("background-image","url(motive2.jpg)")
+      $("#s").remove();
+    }
+    $("#search").keyup(function(){
+    	var value=$(this).val().toLowerCase();
+    	$("#div1,#div2,#div3,#div4,#div5").filter(function(){
+    		$(this).toggle($(this).html().toLowerCase().indexOf(value)>-1);
+    	});
+    })
+  });
+</script>
+      
+
+  <div class="media" >
+  <div class="media-left">
+    <img src="motivation-images/p6.jpg" class="media-object img-circle" style="width:60px;height: 60px;">
+  </div>
+  <div class="media-body">
+    <h4 class="media-heading">Pragaya Gupta <small> Posted on March 7,2019</small></h4>
+    <p>I liked this very much. I have learnt a lot of yoga asanas from here.It is also my music hearing and my entertainment site.
+      Love you brainwave...
+    </p>
+  
+
+
+  <div class="media">
+  <div class="media-left">
+    <img src="motivation-images/p2.jpg" class="media-object img-circle" style="width:60px;height: 60px;">
+  </div>
+  <div class="media-body">
+    <h4 class="media-heading">Vanita Goyal <small> Posted on March 9,2019</small></h4>
+    <p>Ya, So soothing and mind relaxing music.I've become a fan of brainwave. 
+    </p>
+  </div>
+</div>
+</div>
+
+  <div class="media">
+  <div class="media-left">
+    <img src="motivation-images/p5.jpg" class="media-object img-circle" style="width:60px; height:60px;">
+  </div>
+  <div class="media-body">
+    <h4 class="media-heading">Sahil Bansal <small> Posted on February 19,2019</small></h4>
+    <p>I love it for the games.Games are my life. And when you learn something from these games,You get a reason play them all day 
+    </p>
+  </div>
+</div>
+
+  <div class="media">
+  <div class="media-left">
+    <img src="motivation-images/p7.jpg" class="media-object img-circle" style="width:60px;height: 60px;">
+  </div>
+  <div class="media-body">
+    <h4 class="media-heading">Saksham Chaudhary <small> Posted on February 12,2019</small></h4>
+    <p>It help me gain my lost motivation whenever i loose strength.It is my best trustworthy friend.  </p>
+  </div>
+</div>
+</div>
+<div class="media">
+  <div class="media-left">
+    <img src="motivation-images/p1.jpg" class="media-object img-circle" style="width:60px;height: 60px;">
+  </div>
+  <div class="media-body">
+    <h4 class="media-heading">Bhavika Singh Goyal<small> Posted on February 5,2019</small></h4>
+    <p>My Subway surfer..have capacity to brainwave for whole day<font color="hotpink"><i class="glyphicon glyphicon-star"></i></font></p>
+
+    <div class="media">
+  <div class="media-left">
+    <img src="motivation-images/p3.jpg" class="media-object img-circle" style="width:60px;height: 60px;">
+  </div>
+  <div class="media-body">
+    <h4 class="media-heading">Gurvinder Singh<small> Posted on February 5,2019</small></h4>
+    <p>Took such a easy task.When You get a platform to learn and enjoy simultaneously, who can't do it for whole day. At least i can do it easily.<font color="orange"><i class="glyphicon glyphicon-star-empty"></i></font></p>
+  </div>
+</div>
+
+  </div>
+</div>
+<div class="media">
+  <div class="media-left">
+    <img src="motivation-images/p8.jpg" class="media-object img-circle" style="width:60px;height: 60px;">
+  </div>
+  <div class="media-body">
+    <h4 class="media-heading">Neera Khurana<small> Posted on February 4,2019</small></h4>
+    <p>Love You BrainWave<font color="red"><i class="glyphicon glyphicon-heart"></i><i class="glyphicon glyphicon-heart-empty"></i></font></p>
+  </div>
+</div>
+<br>
+</div>
+<script>
+	$("#star1").click(function(){$(this).removeClass("glyphicon-star-empty").addClass("glyphicon-star");
+$("#star2,#star3,#star4,#star5").addClass("glyphicon-star-empty");
+});
+	$("#star2").click(function(){$("#star1,#star2").removeClass("glyphicon-star-empty").addClass("glyphicon-star");$("#star3,#star4,#star5").addClass("glyphicon-star-empty");});
+	$("#star3").click(function(){$("#star1,#star2,#star3").removeClass("glyphicon-star-empty").addClass("glyphicon-star");$("#star4,#star5").addClass("glyphicon-star-empty");});
+	$("#star4").click(function(){$("#star1,#star2,#star3,#star4").removeClass("glyphicon-star-empty").addClass("glyphicon-star");$("#star5").addClass("glyphicon-star-empty");});
+	$("#star5").click(function(){$("#star1,#star2,#star3,#star4,#star5").removeClass("glyphicon-star-empty").addClass("glyphicon-star");});
+</script>
+<div class="modal fade" id=mod >
+  <div class="modal-dialog ">
+    <div class="modal-content">
+      <div class=modal-header style="background: #aaa;">
+        <a  class="btn btn-default close "href=# data-dismiss="modal">&times;</a>
+        </div>
+      <div class=modal-body>
+        <ul class="nav nav-tabs " >
+        <li class=active><a href=#signup data-toggle=tab>Sign In</a></li>
+        <li><a href=#signin data-toggle=tab>Sign Up</a></li>
+      </ul>
+        <div class=tab-content>
+  <div class="tab-pane fade in active" id=signup>
+          <form action="post">
+            <br>
+      <div class="form-group">
+        <!--<label for=uname>Username:</label>-->
+      <div class="input-group input-group-lg">
+        <i class=input-group-addon><i class="glyphicon glyphicon-user"></i></i>
+        <input type=text name=uname id=uname  class=form-control placeholder="Username..." ng-model="name1">
+      </div></div>
+      <div class="form-group">
+       <!-- <label for=pass>Password:</label>-->
+      <div class="input-group input-group-lg" id=end1>
+        <i class=input-group-addon><i class="glyphicon glyphicon-lock"></i></i>
+        <input type=password name=pass id=pass  class=form-control placeholder="Password..."  ng-model="pass1">
+      </div>
+      <span class=help-block style='color:red;' ng-if="!((name1=='Priyanshi Gupta'&&pass1=='priya123')||(name1=='Ishika Singla'&&pass1=='ishika123'))&&c">Enter a valid username or password</span>
+    </div>
+      <div class="form-group ">
+      <div class=checkbox>
+        <label for=ch>
+          <input type=checkbox name=remember id=ch >
+          Remember Me
+        </label>
+      </div></div>
+      <a class="btn btn-warning" href=# id=sup ng-click=hi()>Sign In</a>
+    </form>
+  </div>
+  <div class="tab-pane fade" id=signin>
+    
+    <form action="post" >
+      <br>
+      <div class="form-group nam">
+       <!-- <label for=uname2>Username:</label>-->
+      <div class="input-group input-group-lg" id=s1>
+        <i class=input-group-addon><i class="glyphicon glyphicon-user"></i></i>
+        <input type=text name=uname1 id=uname2 class=form-control placeholder="Username" ng-model=name>
+      </div>
+      <span class=help-block style='color:red;' ng-if="name=='Priyanshi Gupta'||name=='Ishika Singla'">This username is already registered. Please try another one.</span>
+    </div>
+      <div class="form-group pas">
+        <!--<label for=pass2>Password:</label>-->
+      <div class="input-group input-group-lg" id=s2>
+        <i class=input-group-addon><i class="glyphicon glyphicon-lock"></i></i>
+        <input type=password name=pass1 id=pass2  class=form-control placeholder="password" ng-model=pass>
+      </div></div>
+      <div class="form-group pas">
+        <!--<label for=conpass>Confirm Password:</label>-->
+      <div class="input-group input-group-lg" id=end2>
+        <i class=input-group-addon><i class="glyphicon glyphicon-lock"></i></i>
+        <input type=password name=pass2 id=conpass  class=form-control placeholder="Confirm password" ng-model=conpass>
+      </div></div>
+      <span class=help-block style='color:red;' ng-if="pass!=conpass">Confirm Password</span>
+      <div class="checkbox">
+        <label for=check>
+          <input type=checkbox name=terms id=check ng-model=check>
+          You Agree with all our terms and conditions
+        </label>
+      </div>
+      
+      <a class="btn btn-warning" href="#" id=sin ng-disabled="!check">Sign Up</a>
+      <!--<div ng-if="pass==conpass||name!='Priyanshi Gupta'||name!='Ishika Singla'" ng-model=ok></div>-->
+    </form>
+  </div>
+
+    </div>
+      </div>
+    </div>
+  </div>
+  </div>
+
+  <script>
+    
+      $(window).resize(function(){
+
+        if($(window).width()<=768)
+      {
+        $('#top_text').hide();
+        $(".col-md-8").hide();
+      }
+      else 
+      {
+        $('#top_text').show();
+        $(".col-md-8").show();
+      }
+
+      });
+     
+      $('[data-toggle=popover]').popover({
+        html:true
+      });
+  </script>
+
+  <script>
+    $(document).ready(function(){
+    $(".progress-bar").animate({width:"100%"},"fast",function(){
+      
+      $("#all-material").fadeIn();
+      $("#load").fadeOut(600);
+      
+    });
+    $("#div1,#div2,#div3,#div4,#div5").height($(window).height()-20).width($(window).width());
+      
+        });
+    
+  </script>
+  <script>
+    var app=angular.module("myapp",[]);
+    app.controller("ctrl",function($scope,$timeout){
+      $timeout(function(){
+        $("#mod").modal("show");
+        
+      },5000);
+      $scope.c=false;
+      $scope.hi=function(){
+      	$scope.c=true;
+      }
+    })
+  </script>
+  <script>
+  $(document).ready(function(){
+  $("#sup").click(function(){
+      var name=$("#uname").val();
+      var pwd=$("#pass").val();
+      if((name=="Priyanshi Gupta"&&pwd=="priya123")||(name=="Ishika Singla"&& pwd=="ishika123"))
+      {
+        //$("#sup").attr("href","brain-latest.html");
+        $(".modal-body").html("<center><h2>Hi "+name+", Welcome Back!</h2><br><button class='btn btn-default'  data-dismiss=modal>Continue Surfing</button></center>");
+      }
+     //else $("#end1").after("<span class=help-block style='color:red;'>Enter a valid username or password</span>")
+    });
+  
+$("#sin").click(function(){
+      var un=$("#uname2").val();
+      var pass=$("#pass2").val();
+      var conpass=$("#conpass").val();
+        if(un!="Priyanshi Gupta"&&un!="Ishika Singla"&&pass==conpass)
+        {  // $("#uname2").val(null);
+         // $("#s1").after("<span class=help-block style='color:red;'>This username is already registered. Please try another one.</span>");
+         // $("#s1").addClass("has-error has-feedback").append("<span class='glyphicon glyphicon-remove form-control-feedback'></span>");
+          $(".modal-body").html("<center><h2>Congrats "+un+"!</h2><br><h3>You have been successfuly registered in Brainwave. You have chose a right place for your development.Hope you enjoy with us.<br></h3><h3 style='text-align: right;'>Team BrainWave</h3><br><button class='btn btn-default'  data-dismiss=modal>Continue Surfing</button></center>");
+        }
+    });
+
+  });
+</script>
+
+</body>
+
+</html>

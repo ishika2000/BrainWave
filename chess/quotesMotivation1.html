@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Motivating Quotes</title>
+  <link rel="short icon" type=image href="logo4.png">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+  <style>
+  .container{background-color: lightblue;}
+  img.img-thumbnail{
+  	height: 272px;
+  	width: 272px;
+  	margin: 5px;
+  }
+ .well{text-align: center;
+ 	font-family: serif;
+ 	margin: 5px;
+ 	padding: 0px;
+ 	border: 2px dotted blue;
+ 	color: red;
+ 	font-size: 45px;
+ }
+ #w{font-size: 45px;
+ 	color:black;
+ 	font-family: sans-serif;
+ 	font-weight: 500;
+ }
+ .alert{
+  position: fixed;
+  bottom: 0px;
+  margin: 0px 10px;
+
+
+ }
+</style>
+</head>
+<body>
+<div style="height: 70px;background-color: white;margin-bottom: 10px;">
+	<div id="logo">
+		<img src="wave.png" height="70px" width=auto style="float: left;">
+		<p class=text-uppercase style="float: right;font-family:sans-serif;word-spacing: 5px;letter-spacing: 2px;vertical-align: text-bottom;font-size: 17px"><br>A wave to make india mentally strong and relaxed</p>
+	</div></div>
+	<h2 id=header class=text-uppercase style="font-family: serif;font-size: 30px;text-align: center;background-color: dodgerblue;word-spacing: 3px;">It does'nt matter how slowly you go as long as you don't stop.</h2>
+ 
+<div class="alert alert-info alert-dismissible fade in">
+      <b>Click</b> on the image to enlarge and <b>double click</b> to bring back to original size.<span class="close" data-dismiss=alert aria-label="close" >&times;</span>
+      </div>
+
+  <div class="container">
+    <img class="img-thumbnail" src="motive.jpg"> 
+    <img class="img-thumbnail" src="motivation-images/img1.jpg">
+    <img class="img-thumbnail" src="motivation-images/img2.png">
+    <img class="img-thumbnail" src="motivation-images/img3.jpg">
+    <img class="img-thumbnail" src="motivation-images/img4.jpg">
+    <img class="img-thumbnail" src="motivation-images/img5.png">
+    <img class="img-thumbnail" src="motivation-images/img6.jpg">
+    <img class="img-thumbnail" src="motivation-images/img7.jpg">
+    <img class="img-thumbnail" src="motivation-images/img8.jpg">
+    <img class="img-thumbnail" src="motivation-images/img9.jpg">
+    <img class="img-thumbnail" src="motivation-images/img10.jpg">
+    <img class="img-thumbnail" src="motivation-images/img11.jpg">
+    <img class="img-thumbnail" src="motivation-images/img12.jpg">
+    <img class="img-thumbnail" src="motivation-images/img13.jpg">
+    <img class="img-thumbnail" src="motivation-images/img14.jpg">
+    <img class="img-thumbnail" src="motivation-images/img15.jpg">
+    <img class="img-thumbnail" src="motivation-images/img16.png">
+    <img class="img-thumbnail" src="motivation-images/img17.jpg">
+    <img class="img-thumbnail" src="motivation-images/img18.png">
+    <img class="img-thumbnail" src="motivation-images/img19.jpg">
+    <img class="img-thumbnail" src="motivation-images/img20.jpg">
+    <img class="img-thumbnail" src="motivation-images/img21.jpg">
+    <img class="img-thumbnail" src="motivation-images/img22.jpg">
+    <img class="img-thumbnail" src="motivation-images/img23.png">
+    <img class="img-thumbnail" src="motivation-images/img24.jpg">
+    <img class="img-thumbnail" src="motivation-images/img25.jpg">
+    <img class="img-thumbnail" src="motivation-images/img26.jpg">
+    <img class="img-thumbnail" src="motivation-images/img27.jpg">
+    <img class="img-thumbnail" src="motivation-images/img28.jpg">
+    <img class="img-thumbnail" src="motivation-images/img29.jpg">
+    <img class="img-thumbnail" src="motivation-images/img35.jpg">
+    <img class="img-thumbnail" src="motivation-images/img31.jpg">
+    <img class="img-thumbnail" src="motivation-images/img32.jpg">
+    <img class="img-thumbnail" src="motivation-images/img33.jpg">
+    <img class="img-thumbnail" src="motivation-images/img34.jpg">
+    <img class="img-thumbnail" src="motivation-images/img36.jpg">
+    <!--<img class="img-thumbnail" src="motivation-images/img36.jpg">-->
+    <div class=well>Your Only limit is <span id=w>YOU</span>, Overcome Yourself.</div>
+    </div>
+    </body>
+<script>
+	$(document).ready(function(){
+		$("#header").hover(function(){
+			$(this).css({"font-size":"35px"});
+		},
+		function(){
+			$(this).css({"font-size":"30px"});
+		/*$(".img-thumbnail").click(function(){
+			$(this).animate({
+			left:'120px',
+			height:'45px'
+			},"slow");*/
+		});		
+		$(".well").mouseenter(function(){
+			$(this).animate({fontSize:"1em"},"slow");
+			$(this).animate({fontSize:"3em"},"slow");
+
+		});
+    $("img").click(function(){
+        $(this).animate({height:"500px",width:"500px",opacity:"1"},"slow");
+
+        //$(this).animate({height:"272px",width:"272px;"},"slow");
+      });
+ $("img").dblclick(function(){
+        //$(this).animate({height:"500px",width:"500px"},"slow");
+        
+        $(this).animate({height:"272px",width:"272px"},"slow");
+      });
+var w=$("body").width();
+$(".alert").width(w-70);
+	});
+	
+</script>
+</html>

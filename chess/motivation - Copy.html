@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+
+	<link rel="short icon" type=image href="logo4.png">
+	<title>Brainwave > Motivation </title>
+	<style>
+	*{font-family: serif;}
+	body{background: url('download1.jpg');
+		background-size: cover;
+		margin: 0px 0px  ;/*10px 1px*/
+	}
+
+	
+		#aim{
+			background-color: darkorange;
+			font-size: 40px;
+			margin: 5px;
+			border:3px dotted red;
+		}
+		/*.container{
+			background-color: lightblue;
+			border: 3px solid blue;
+			padding :10px;
+			float: left;
+			height: 350px;
+		}*/
+		
+		div#test{
+			border :#000  1px solid ;
+			padding: 10px 40px 40px 40px;
+			width: 500px;
+			margin: auto;
+			height: 200px;
+
+		}
+		#a,#b,#c,#d,#e{display: none;}
+		.btn{background-color:dodgerblue; height:40px; font-size:23px;border:1px solid blue;}
+	</style>
+	 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+</head>
+
+
+
+
+
+
+<body>
+
+		<div style="height: 70px;background-color: white;margin-bottom: 10px;">
+	<div id="logo">
+		<img src="wave.png" height="70px" width=auto style="float: left;">
+		<p style="float: right;font-family:sans-serif;text-transform: uppercase;word-spacing: 5px;letter-spacing: 2px;vertical-align: text-bottom;"><br>A wave to make india mentally strong and relaxed</p>
+	</div></div>
+		<!--<div><img src="motive.jpg" height="225px"  id=a ></div>
+		<div><img src=motive2.jpg height="225px" id=b></div>
+		<div><img src="motive1.jpg" height="225px" id=c></div>
+		<div><img src=motive4.jpg height="225px" id=d></div>
+		<div><img src=motive3.jpg height="225px" id=e></div>-->
+		<!--<img src=motivating.jpg height="428px" width=780px style="float: left">
+		<img src=dreams.jpg height="428px" width="565px" style="float: left">-->
+		<center><p id=aim>Don't feel low, you can do it.</p></center>
+		<!--<marquee direction=right><div><img src="motive.jpg" height="225px">
+		<img src=motive2.jpg height="225px">
+		<img src="motive1.jpg" height="225px">
+		<img src=motive4.jpg height="225px">
+		<img src=motive3.jpg height="225px"></div></marquee>-->
+		<!--<div style="background-color: orange">
+			<p style="font-weight: 200;font-size: 30px;">I'm perfect</p></div>
+			<div style="background-color: orange">
+			<p style="font-weight: 300;font-size: 45px;">I can do everything</p></div>
+			<div style="background-color: orange">
+		<p style="font-weight: 900 ;font-size: 40px;">I'm a masterpiece</p></div>
+			<div style="background-color: orange">
+		<p style="font-weight: 100;font-size: 35px;">I'm awsome</p></div>
+			<div style="background-color: orange">
+		<p style="font-weight: 400;font-size: 50px">I'm beautiful</p></div>
+		-->
+	<div class=container>
+		<div class=jumbotron>
+		<h2 align="center">Test your motivation level.</h2>
+		<h3 id=test_status ></h3>
+		<div id=test></div>
+	</div></div>
+</body>
+
+
+
+
+
+</html>
+<script>
+	var pos=0,question,choice ,choices,chA,chB,chC,chD,points=0,test,test_status;
+	var questions=[
+		["I'm unsure of my ability to achieve the goals I set for myself.","Not at all","Sometimes","Most of the times",3,2,1],
+		["I regularly set goals and objectives to achieve my vision for my life.","Not at all","Sometimes","Most of the times",1,2,3],
+		["When working on my goals, I put in maximum effort and work even harder if I've suffered a setback.","Not at all","sometimes","Most of the times",1,2,3],
+		["I use rewards (and consequences) to keep myself focused. For example, if I finish my report on time, I allow myself to take a coffee break.","Not at all","sometimes","Most of the times",1,2,3],
+		["I believe that if I work hard and apply my abilities and talents, I will be successful","Not at all","sometimes","Most of the times",1,2,3],
+		["When an unexpected event threatens or jeopardizes my goal, I tend to walk away, set a different goal, and move in a new direction.","Not at all","sometimes","Most of the times",3,2,1],
+		["I worry about deadlines and getting things done, which causes stress and anxiety.","Not at all","sometimes","Most of the times",3,2,1],
+		["I believe that if I work hard and apply my abilities and talents, I will be successful.","Not at all","sometimes","Most of the times",1,2,3],
+		["I tend to do only the minimum amount of work necessary to keep my boss and my team satisfied.","Not at all","sometimes","Most of the times",3,2,1],
+		["I tend to worry about why I won't reach my goals, and I often focus on why something probably won't work.","Not at all","sometimes","Most of the times",3,2,1],
+		["I feel that others dont care about me and have no bonding with me.","Not at all","sometimes","Most of the times",1,2,3],
+		["My family suports me in each phase of my life,how much do i fall","Not at all","sometimes","Most of the times",1,2,3],
+		["I create a vivid and powerful vision of my future success before embarking on a new goal.","Not at all","sometimes","Most of the times",1,2,3],
+		["If I need to choose  one ,family or my job.<br>what would i choose"," My Family","My Job","Will leave both of them",3,2,1],
+		["I regularly set goals and objectives to achieve my vision for my life.","Not at all","sometimes","Most of the times",1,2,3]
+		]
+		function _(x){
+			return document.getElementById(x);
+			//return $('#'x);
+		}
+		function renderQuestion(){
+			if(pos>=questions.length)
+			{
+				_("test_status").innerHTML="Test Completed";
+				if(points<15){_("test_status").innerHTML="Please Attempt All Questions to judge yourself properly";
+				test.innerHTML="You Did'nt attempt all questions.It's OK. Do Watch a video to get motivated. "
+			}
+				else {test.innerHTML="<h2> You Got "+ points +" points.</h2>"
+				if(points>=15 && points<=25)
+					test.innerHTML+="You allow your personal doubts and fears to keep you from succeeding. You've probably had a few incomplete goals in the past, so you may have convinced yourself that you aren't self-motivated - and then you've made that come true. Break this harmful pattern now, and start believing in yourself again. The videos below will help you get back your motivation."
+				
+				else if(points>25 &&points<=35)test.innerHTML+="You're doing OK on self-motivation. You're certainly not failing - however, you could achieve much more. To achieve what you want, try to increase the motivation factors in all areas of your life. Read the relevant sections below, and work on them to strengthen your self-motivation."
+					else if(points>35&&points<=45)test.innerHTML+="Wonderful! You get things done, and you don't let anything stand in your way. You make a conscious effort to stay self-motivated, and you spend significant time and effort on setting goals and acting to achieve those goals. You attract and inspire others with your success. Treasure this - and be aware that not everyone is as self-motivated as you are! ";
+			}
+			return false;
+			}
+			test=_("test");
+			_("test_status").innerHTML="Question "+(pos + 1)+" of "+questions.length;
+			question=questions[pos][0];
+			chA=questions[pos][1];
+			chB=questions[pos][2];
+			chC=questions[pos][3];
+			test.innerHTML="<h3>"+question+"</h3>";
+			test.innerHTML+="<input type='radio' name=choices value=A>"+chA+"<br>";
+			test.innerHTML+="<input type='radio' name=choices value=B>"+chB+"<br>";
+			test.innerHTML+="<input type='radio' name=choices value=C>"+chC+"<br><br>";
+			test.innerHTML+="<button class=btn onclick='checkAnswer()' '>Submit Answer</button>";
+		}
+		function checkAnswer(){
+			choices=document.getElementsByName("choices");
+			for(var i=0;i<choices.length;i++)
+			{
+				if(choices[i].checked){points+=questions[pos][i+4];break;}
+			}
+			pos++;
+			renderQuestion();
+		}
+		window.addEventListener("load",renderQuestion,false);
+
+</script>
+<script>
+	$(document).ready(function(){
+
+		$(".btn").hover(function(){
+			$(this).css("background-color","white");
+		},
+		function(){
+			$(this).css("background-color","dodgerblue");
+		});
+		$("#a").fadeIn(1000);
+		$("#b").fadeIn(3000);
+		$("#c").fadeIn(5000);
+		$("#d").fadeIn(7000);
+		$("#e").fadeIn(9000);
+		
+			$("div,p").fadeIn();
+			$("#load").fadeOut(6000);
+		});
+		//$(".progress-bar").width()
+		
+		//$("div").fadeIn();
+		
+
+		
+		});
+</script>

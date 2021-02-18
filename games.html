@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>BrainWave > games</title>
+  <link rel="short icon" type=image href="logo4.png">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+
+  <style>
+  body {
+    position: relative; 
+  }
+
+  #add2.affix{top:70px;}
+  nav.affix {
+    top:0;
+    width: 100%;
+    z-index: 9999 !important;
+  }
+  .navbar {
+    margin-bottom: 0px;
+  }
+
+  nav.affix ~ .container-fluid {
+   position: relative;
+   top: 50px;
+  }
+  
+  p,li{font-size: 20px;}
+  .navbar li{
+    font-weight: 700;
+    font-size: 15px;
+    padding: 0px;
+  }
+      *{font-family: serif;}
+  body{overflow-x:hidden;}
+    
+.navbar-inverse .collapse .nav li  a{
+        font-size: 20px;
+        color:white;
+        font-family: serif;
+      }
+ .navbar-inverse .collapse .nav li  a:hover{
+        text-decoration: none;
+        font-size: 23px;
+        
+      }
+      .popover {
+    background: #4c91cd;
+    box-shadow: none;
+    width: 250px;
+      }
+    .popover.bottom .arrow:after {
+        border-bottom-color: #4c91cd;
+    }
+.right{ float: right; }
+.left{float: left;}
+   .navbar-inverse{
+    background: #337ab7;}
+  .all {
+  	box-shadow: 0 8px 16px 0 #aaa;
+ 	transition: 0.3s;
+  	padding: 10px;
+  	margin: 20px;
+  	width:80%;
+  	border-radius: 5px;
+  
+}
+
+
+.all:hover {
+  box-shadow: 0 4px 8px 0 #ccc;
+  </style>
+</head>
+<body data-spy="scroll" data-target="#sidenav" data-offset="50">
+
+<div class=row>
+  <div class="col-md-3 col-xs-12">
+    <center><a href=brain-latest.html><img src="wave.png" height="63px" width="auto" style="margin-top: 10px;"></a></center>
+  </div>
+  <div class="col-md-9" id=top_text>
+    <p class="text-uppercase navbar-text" style="float: right;font-family:sans-serif;word-spacing: 5px;letter-spacing: 2px;font-size: 17px; padding-left:10px;"><br>A wave to make india mentally strong and relaxed</p>
+  </div>
+  </div>
+  <nav class=" navbar-inverse " data-spy=affix data-offset-top=90>
+    <div class=navbar-header>
+  <a type="button" class="navbar-toggle btn btn-default" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav">
+        <li><a href=powermind.html>Power Mind</a></li>
+        <li><a href=# data-trigger=focus data-toggle=popover data-placement=bottom data-content="<li><a href=chess.html>Chess </a> </li> <li><a href=ch.html>Burst the bubbles</a></li><li><a href=memory.html >Remember the Alphabet</a></li>">Games<span class=caret></span></a></li>
+        <li><a href=music.html>Music</a></li>
+        <li><a href=# data-trigger=focus data-toggle=popover data-placement=bottom data-content="<li><a href=quotesMotivation.html>Motivational Quotes </a> </li> <li><a href=motvid.html>Motivational Videos</a></li><li><a href=testmotlev.html >Motivation Level Test</a></li>">Motivation<span class="caret"></span></a></li>
+        <li><a href=yoga.html>Yoga</a></li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <form class="navbar-form">
+        <div class=input-group>
+        <input type="text" id=search name="search" placeholder="Search..." class="form-control">
+        <div class="input-group-btn">
+          <button class="btn btn-default"><span class="glyphicon glyphicon-search"></span></button>
+        </div>
+        </div>
+        </form>
+      </ul>
+  </nav>
+    <script>
+    
+      $(window).resize(function(){
+
+        if($(window).width()<=800)
+      {
+        $('#top_text').hide();
+      }
+      else 
+      {
+        $('#top_text').show();
+      }
+
+      });
+     
+      $('[data-toggle=popover]').popover({
+        html:true
+      });
+  </script>
+  <div id="games">
+  <div class="row">
+  	<div class="col-md-4" >
+  		<center><div class="all"> <img class="img"src="chess.png" style="width: 100%;height: 300px;"><h3>Chess</h3>
+  			<a href="chess.html" target="_blank" class="btn btn-primary btn-lg"> Play Now!</a>
+		</div></center>
+  	</div>
+  	<div class="col-md-4">
+  		<center><div class="all"> <img class="img"src="ch.png" style="width: 100%; height: 300px;"><h3>Burst the Bubbles</h3>
+  			<a href="ch.html" target="_blank" class="btn btn-primary btn-lg"> Play Now!</a>
+		</div></center>
+  	</div><div class="col-md-4">
+  		<center><div class="all"> <img class="img"src="mem.png" style="width: 100%; height: 300px;"><h3>Remember the Alphabet</h3>
+  			<a href="memory.html" target="_blank" class="btn btn-primary btn-lg"> Play Now!</a>
+		</div></center>
+  	</div>
+  </div>
+  <!--<div class="row">
+  	<div class="col-md-4">
+  		<center><div class="all"> <img class="img"src="chess.png" style="width: 100%;"><h3></h3>
+  			<a href="chess.html" target="_blank" class="btn btn-primary btn-lg"> Play Now!</a>
+		</div></center>
+  	</div><div class="col-md-4">
+  		<center><div class="all"> <img class="img"src="chess.png" style="width: 100%;"><h3>Chess</h3>
+  			<a href="chess.html" target="_blank" class="btn btn-primary btn-lg"> Play Now!</a>
+		</div></center>
+  	</div><div class="col-md-4">
+  		<center><div class="all"> <img class="img"src="chess.png" style="width: 100%;"><h3>Chess</h3>
+  			<a href="chess.html" target="_blank" class="btn btn-primary btn-lg"> Play Now!</a>
+		</div></center>
+  	</div>-->
+
+  </div>
+</div>
+<script>
+	$(".alldiv").hide();
+		
+	$(document).ready(function(){
+		//$(".all").addClass("bg-primary");
+	});
+</script>
+	<!--<a href="" target="_blank"><div class="all Snake"> <img class="img"src="title_bg.png" style="width: 100%;"><h3>snake</h3></div></a>
+	<a href="" target="_blank"><div class="all Car"> <img class="img"src="title_bg.png" style="width: 100%;"><h3>car drive</h3></div></a>
+	<a href="" target="_blank"><div class="all Car"> <img class="img"src="title_bg.png" style="width: 100%;"><h3>car wash</h3></div></a>
+	<a href="" target="_blank"><div class="all Barbie"> <img class="img"src="title_bg.png" style="width: 100%;"><h3>barbie dress up</h3></div></a>
+	<a href="" target="_blank"><div class="all Barbie"> <img class="img"src="title_bg.png" style="width: 100%;"><h3>barbie shopping</h3></div></a>
+	<a href="memory.html" target="_blank"><div class="all Memory"> <img class="img"src="title_bg.png" style="width: 100%;"><h3>memory</h3></div></a>
+	<a href=" " target="_blank"><div class="all Puzzles"> <img class="img"src="title_bg.png" style="width: 100%;"><h3>puzzle</h3></div></a>
+	<a href=" " target="_blank"><div class="all Memory"> <img class="img"src="title_bg.png" style="width: 100%;"><h3>memo</h3></div></a>
+	<a href=" " target="_blank"><div class="all Puzzles"> <img class="img"src="title_bg.png" style="width: 100%;"><h3>crossword</h3></div></a>-->
+<script>
+$(document).ready(function(){
+  $("#search").on("keyup", function() {
+    var value = $(this).val().toLowerCase();
+    $(".col-md-4").filter(function() {
+      $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+    });
+  });
+  $(".feed").click(function(){
+    $("#feed").html("<center><h2>Thanks for Your feedback</h2></center>")
+  })
+});
+</script>
+
+</body>
+</html>
+
